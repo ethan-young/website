@@ -1077,3 +1077,239 @@ remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1) 
 To https://github.com/ethan-young/website.git
    b6d5ac9..23bbac7  master -> master
 ]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git add .
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git commit -m "trying to fix tthis [K[K[K[K[Khis site"
+[master b89ecbd] trying to fix this site
+ 233 files changed, 130 insertions(+), 46254 deletions(-)
+ rewrite .Rproj.user/D1E6648A/console06/INDEX001 (86%)
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/15335379-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/1D8A53D8-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/1ECB82AF-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/21DD2E-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/233A26A1-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/25274E17-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/31569C91-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/4FA89B25-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/56AA269-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/57C04017-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/5F5D7979-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/7AB7662B
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/7AB7662B-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/8185D55D-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/8A5D410D-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/95ABD3C3-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/A1F7780-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/A9142EF6-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/B1E2EC44
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/B1E2EC44-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/B4D77510-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/B8EFF1E0-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/BCACCD05-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/C2FB4CCB-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/C556B743-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/C58ABC07-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/D6EF5C1E-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/F8124595-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/F8B67FE8-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/FCAC482A-contents
+ delete mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/lock_file
+ delete mode 100644 content/CV/_index.html
+ delete mode 100644 content/posts/2017-02-22-restructuring-dyadic-data.html
+ delete mode 100644 content/posts/2017-10-05-dplyr.html
+ delete mode 100644 content/posts/2018-12-23-sem-diagrams-for-lavaan-models.html
+ delete mode 100644 content/resources/_index.html
+ delete mode 100644 public/.gitkeep
+ delete mode 100644 public/about/index.html
+ delete mode 100644 public/about/index.xml
+ delete mode 100644 public/archive/index.html
+ delete mode 100644 public/archive/index.xml
+ delete mode 100644 public/css/auto-complete.css
+ delete mode 100644 public/css/custom.css
+ delete mode 100644 public/css/font.css
+ delete mode 100644 public/css/highlight.css
+ delete mode 100644 public/css/kube.css
+ delete mode 100644 public/css/kube.demo.css
+ delete mode 100644 public/css/kube.legenda.css
+ delete mode 100644 public/css/kube.min.css
+ delete mode 100644 public/css/master.css
+ delete mode 100644 public/cv/2015_JPSP_Mittal.pdf
+ delete mode 100644 public/cv/2017_EBS_Szepsenwol.pdf
+ delete mode 100644 public/cv/2017_S&I_Young.pdf
+ delete mode 100644 public/cv/2017_chapter_Simpson_LHTpersonality.pdf
+ delete mode 100644 public/cv/2018_DP_Martin.pdf
+ delete mode 100644 public/cv/2018_JPSP_Young.pdf
+ delete mode 100644 public/cv/_index.Rmd
+ delete mode 100644 public/cv/index.html
+ delete mode 100644 public/cv/index.xml
+ delete mode 100644 public/cv/page/1/index.html
+ delete mode 100644 public/font/Lato-Black.woff
+ delete mode 100644 public/font/Lato-Bold.woff
+ delete mode 100644 public/font/Lato-BoldItalic.woff
+ delete mode 100644 public/font/Lato-Italic.woff
+ delete mode 100644 public/font/Lato-Regular.woff
+ delete mode 100644 public/font/Lato-Semibold.woff
+ delete mode 100644 public/font/Lato-SemiboldItalic.woff
+ delete mode 100644 public/highlight/CHANGES.md
+ delete mode 100644 public/highlight/LICENSE
+ delete mode 100644 public/highlight/README.md
+ delete mode 100644 public/highlight/README.ru.md
+ delete mode 100644 public/highlight/highlight.pack.js
+ delete mode 100644 public/highlight/styles/agate.css
+ delete mode 100644 public/highlight/styles/androidstudio.css
+ delete mode 100644 public/highlight/styles/arduino-light.css
+ delete mode 100644 public/highlight/styles/arta.css
+ delete mode 100644 public/highlight/styles/ascetic.css
+ delete mode 100644 public/highlight/styles/atelier-cave-dark.css
+ delete mode 100644 public/highlight/styles/atelier-cave-light.css
+ delete mode 100644 public/highlight/styles/atelier-dune-dark.css
+ delete mode 100644 public/highlight/styles/atelier-dune-light.css
+ delete mode 100644 public/highlight/styles/atelier-estuary-dark.css
+ delete mode 100644 public/highlight/styles/atelier-estuary-light.css
+ delete mode 100644 public/highlight/styles/atelier-forest-dark.css
+ delete mode 100644 public/highlight/styles/atelier-forest-light.css
+ delete mode 100644 public/highlight/styles/atelier-heath-dark.css
+ delete mode 100644 public/highlight/styles/atelier-heath-light.css
+ delete mode 100644 public/highlight/styles/atelier-lakeside-dark.css
+ delete mode 100644 public/highlight/styles/atelier-lakeside-light.css
+ delete mode 100644 public/highlight/styles/atelier-plateau-dark.css
+ delete mode 100644 public/highlight/styles/atelier-plateau-light.css
+ delete mode 100644 public/highlight/styles/atelier-savanna-dark.css
+ delete mode 100644 public/highlight/styles/atelier-savanna-light.css
+ delete mode 100644 public/highlight/styles/atelier-seaside-dark.css
+ delete mode 100644 public/highlight/styles/atelier-seaside-light.css
+ delete mode 100644 public/highlight/styles/atelier-sulphurpool-dark.css
+ delete mode 100644 public/highlight/styles/atelier-sulphurpool-light.css
+ delete mode 100644 public/highlight/styles/atom-one-dark.css
+ delete mode 100644 public/highlight/styles/atom-one-light.css
+ delete mode 100644 public/highlight/styles/brown-paper.css
+ delete mode 100644 public/highlight/styles/brown-papersq.png
+ delete mode 100644 public/highlight/styles/codepen-embed.css
+ delete mode 100644 public/highlight/styles/color-brewer.css
+ delete mode 100644 public/highlight/styles/darcula.css
+ delete mode 100644 public/highlight/styles/dark.css
+ delete mode 100644 public/highlight/styles/darkula.css
+ delete mode 100644 public/highlight/styles/default.css
+ delete mode 100644 public/highlight/styles/docco.css
+ delete mode 100644 public/highlight/styles/dracula.css
+ delete mode 100644 public/highlight/styles/far.css
+ delete mode 100644 public/highlight/styles/foundation.css
+ delete mode 100644 public/highlight/styles/github-gist.css
+ delete mode 100644 public/highlight/styles/github.css
+ delete mode 100644 public/highlight/styles/googlecode.css
+ delete mode 100644 public/highlight/styles/grayscale.css
+ delete mode 100644 public/highlight/styles/gruvbox-dark.css
+ delete mode 100644 public/highlight/styles/gruvbox-light.css
+ delete mode 100644 public/highlight/styles/hopscotch.css
+ delete mode 100644 public/highlight/styles/hybrid.css
+ delete mode 100644 public/highlight/styles/idea.css
+ delete mode 100644 public/highlight/styles/ir-black.css
+ delete mode 100644 public/highlight/styles/kimbie.dark.css
+ delete mode 100644 public/highlight/styles/kimbie.light.css
+ delete mode 100644 public/highlight/styles/magula.css
+ delete mode 100644 public/highlight/styles/mono-blue.css
+ delete mode 100644 public/highlight/styles/monokai-sublime.css
+ delete mode 100644 public/highlight/styles/monokai.css
+ delete mode 100644 public/highlight/styles/obsidian.css
+ delete mode 100644 public/highlight/styles/ocean.css
+ delete mode 100644 public/highlight/styles/paraiso-dark.css
+ delete mode 100644 public/highlight/styles/paraiso-light.css
+ delete mode 100644 public/highlight/styles/pojoaque.css
+ delete mode 100644 public/highlight/styles/pojoaque.jpg
+ delete mode 100644 public/highlight/styles/purebasic.css
+ delete mode 100644 public/highlight/styles/qtcreator_dark.css
+ delete mode 100644 public/highlight/styles/qtcreator_light.css
+ delete mode 100644 public/highlight/styles/railscasts.css
+ delete mode 100644 public/highlight/styles/rainbow.css
+ delete mode 100644 public/highlight/styles/routeros.css
+ delete mode 100644 public/highlight/styles/school-book.css
+ delete mode 100644 public/highlight/styles/school-book.png
+ delete mode 100644 public/highlight/styles/solarized-dark.css
+ delete mode 100644 public/highlight/styles/solarized-light.css
+ delete mode 100644 public/highlight/styles/sunburst.css
+ delete mode 100644 public/highlight/styles/tomorrow-night-blue.css
+ delete mode 100644 public/highlight/styles/tomorrow-night-bright.css
+ delete mode 100644 public/highlight/styles/tomorrow-night-eighties.css
+ delete mode 100644 public/highlight/styles/tomorrow-night.css
+ delete mode 100644 public/highlight/styles/tomorrow.css
+ delete mode 100644 public/highlight/styles/vs.css
+ delete mode 100644 public/highlight/styles/vs2015.css
+ delete mode 100644 public/highlight/styles/xcode.css
+ delete mode 100644 public/highlight/styles/xt256.css
+ delete mode 100644 public/highlight/styles/zenburn.css
+ delete mode 100755 public/img/EthanYParsimony.jpg
+ delete mode 100644 public/img/archive.png
+ delete mode 100644 public/img/archive.svg
+ delete mode 100644 public/img/common/icon-twitter.png
+ delete mode 100644 public/img/common/logo.png
+ delete mode 100644 public/img/common/logx2.png
+ delete mode 100644 public/img/favicons/logo-384x384.png
+ delete mode 100644 public/img/icon-minimalism.png
+ delete mode 100644 public/img/icon-typo.png
+ delete mode 100644 public/img/kube/brand.png
+ delete mode 100644 public/img/kube/icon-baseline.png
+ delete mode 100644 public/img/kube/icon-minimalism.png
+ delete mode 100644 public/img/kube/icon-typo.png
+ delete mode 100644 public/img/kube/typography/01.png
+ delete mode 100644 public/img/kube/typography/02.png
+ delete mode 100644 public/index.html
+ delete mode 100644 public/index.json
+ delete mode 100644 public/index.xml
+ delete mode 100644 public/js/auto-complete.js
+ delete mode 100644 public/js/jquery-2.1.4.min.js
+ delete mode 100644 public/js/kube.js
+ delete mode 100644 public/js/kube.legenda.js
+ delete mode 100644 public/js/kube.min.js
+ delete mode 100644 public/js/lunr.min.js
+ delete mode 100644 public/js/master.js
+ delete mode 100644 public/js/search.js
+ delete mode 100644 public/js/tocbot.min.js
+ delete mode 100644 public/page/1/index.html
+ delete mode 100644 public/posts/2017-02-22-restructuring-dyadic-data.Rmd
+ delete mode 100644 public/posts/2017-10-05-dplyr.Rmd
+ delete mode 100644 public/posts/2018-12-23-sem-diagrams-for-lavaan-models.Rmd
+ delete mode 100644 public/posts/2018-12-23-sem-diagrams-for-lavaan-models_files/figure-html/unnamed-chunk-7-1.png
+ delete mode 100644 public/posts/dplyr/index.html
+ delete mode 100644 public/posts/index.html
+ delete mode 100644 public/posts/index.xml
+ delete mode 100644 public/posts/page/1/index.html
+ delete mode 100644 public/posts/restructuring-dyadic-data/index.html
+ delete mode 100644 public/posts/sem-diagrams-for-lavaan-models/index.html
+ delete mode 100644 public/projects/index.html
+ delete mode 100644 public/projects/index.xml
+ delete mode 100644 public/projects/page/1/index.html
+ delete mode 100644 public/research/cognition/index.html
+ delete mode 100644 public/research/cognition/index.xml
+ delete mode 100644 public/research/index.html
+ delete mode 100644 public/research/index.xml
+ delete mode 100644 public/research/metabolic-traits/index.html
+ delete mode 100644 public/research/metabolic-traits/index.xml
+ delete mode 100644 public/research/stress-physiology/index.html
+ delete mode 100644 public/research/stress-physiology/index.xml
+ delete mode 100644 public/resources/_index.Rmd
+ delete mode 100644 public/resources/index.html
+ delete mode 100644 public/resources/index.xml
+ delete mode 100644 public/sitemap.xml
+ delete mode 100644 public/tags/code/index.html
+ delete mode 100644 public/tags/code/index.xml
+ delete mode 100644 public/tags/dplyr/index.html
+ delete mode 100644 public/tags/dplyr/index.xml
+ delete mode 100644 public/tags/ggplot2/index.html
+ delete mode 100644 public/tags/ggplot2/index.xml
+ delete mode 100644 public/tags/index.html
+ delete mode 100644 public/tags/index.xml
+ delete mode 100644 public/tags/lavaan/index.html
+ delete mode 100644 public/tags/lavaan/index.xml
+ delete mode 100644 public/tags/r/index.html
+ delete mode 100644 public/tags/r/index.xml
+ delete mode 100644 public/tags/sem/index.html
+ delete mode 100644 public/tags/sem/index.xml
+ delete mode 100644 static/posts/2018-12-23-sem-diagrams-for-lavaan-models_files/figure-html/unnamed-chunk-7-1.png
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git commit -m "trying to fix this site"add .[Kpush origin master
+Counting objects: 24, done.
+Delta compression using up to 4 threads.
+Compressing objects:   4% (1/21)   Compressing objects:   9% (2/21)   Compressing objects:  14% (3/21)   Compressing objects:  19% (4/21)   Compressing objects:  23% (5/21)   Compressing objects:  28% (6/21)   Compressing objects:  33% (7/21)   Compressing objects:  38% (8/21)   Compressing objects:  42% (9/21)   Compressing objects:  47% (10/21)   Compressing objects:  52% (11/21)   Compressing objects:  57% (12/21)   Compressing objects:  61% (13/21)   Compressing objects:  66% (14/21)   Compressing objects:  71% (15/21)   Compressing objects:  76% (16/21)   Compressing objects:  80% (17/21)   Compressing objects:  85% (18/21)   Compressing objects:  90% (19/21)   Compressing objects:  95% (20/21)   Compressing objects: 100% (21/21)   Compressing objects: 100% (21/21), done.
+Writing objects:   4% (1/24)   Writing objects:   8% (2/24)   Writing objects:  12% (3/24)   Writing objects:  16% (4/24)   Writing objects:  20% (5/24)   Writing objects:  25% (6/24)   Writing objects:  29% (7/24)   Writing objects:  33% (8/24)   Writing objects:  37% (9/24)   Writing objects:  41% (10/24)   Writing objects:  45% (11/24)   Writing objects:  50% (12/24)   Writing objects:  54% (13/24)   Writing objects:  58% (14/24)   Writing objects:  62% (15/24)   Writing objects:  66% (16/24)   Writing objects:  70% (17/24)   Writing objects:  75% (18/24)   Writing objects:  79% (19/24)   Writing objects:  83% (20/24)   Writing objects:  87% (21/24)   Writing objects:  91% (22/24)   Writing objects:  95% (23/24)   Writing objects: 100% (24/24)   Writing objects: 100% (24/24), 3.43 KiB | 100.00 KiB/s, done.
+Total 24 (delta 13), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/13)   [Kremote: Resolving deltas:   7% (1/13)   [Kremote: Resolving deltas:  15% (2/13)   [Kremote: Resolving deltas:  23% (3/13)   [Kremote: Resolving deltas:  30% (4/13)   [Kremote: Resolving deltas:  38% (5/13)   [Kremote: Resolving deltas:  46% (6/13)   [Kremote: Resolving deltas:  53% (7/13)   [Kremote: Resolving deltas:  61% (8/13)   [Kremote: Resolving deltas:  69% (9/13)   [Kremote: Resolving deltas:  76% (10/13)   [Kremote: Resolving deltas:  84% (11/13)   [Kremote: Resolving deltas:  92% (12/13)   [Kremote: Resolving deltas: 100% (13/13)   [Kremote: Resolving deltas: 100% (13/13), completed with 13 local objects.[K
+To https://github.com/ethan-young/website.git
+   23bbac7..b89ecbd  master -> master
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git add .
