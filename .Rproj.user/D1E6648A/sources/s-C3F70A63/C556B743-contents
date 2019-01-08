@@ -1,0 +1,36 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "ERRB"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[[menu.main]]
+    name = "Research"
+    url = "/research/"
+    weight = 1
+
+[[menu.main]]
+    name = "Blog"
+    url = "/post/"
+    weight = 2
+
+[[menu.main]]
+    name = "Teaching"
+    url = "/teaching/"
+    weight = 3
+
+[[menu.main]]
+    name = "Open Science"
+    url = "/open-science/"
+    weight = 4
+
+[[menu.main]]
+    name = "Repository"
+    url = "/repository/"
+    weight = 5
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = [ "HTML", "RSS", "JSON"]
