@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1546817587812.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2334026837",
+    "id" : "B1E2EC44",
+    "lastKnownWriteTime" : 1546914532,
+    "last_content_update" : 1546914532821,
+    "path" : "~/Google Drive/Research/Websites/Kube/config.toml",
+    "project_path" : "config.toml",
+    "properties" : {
+        "cursorPosition" : "18,1",
+        "scrollLine" : "5"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "toml"
+}

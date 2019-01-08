@@ -1,0 +1,8 @@
+"0","indv %>% "
+"0","  arrange(dyad_id) %>% "
+"0","  dust() %>% "
+"0","  sprinkle(part=""head"",cols=1:ncol(indv),halign=""center"",pad=5,border=""all"") %>% "
+"0","  sprinkle(part=""body"",halign=""center"",border=""all"") %>% "
+"0","  sprinkle_print_method(""html"")"
+"2","attributes are not identical across measure variables;
+they will be dropped"

@@ -1,0 +1,229 @@
+---
+title: "Ethan S. Young, MA"
+description: "Curriculum Vitae"
+author: Ethan Young
+tocbot: true
+---
+
+```{r setup,echo=F,message=F,warning=F}
+# Libraries
+library(tidyverse)
+library(htmltools)
+library(googlesheets)
+
+# Publications
+journals <- c("Journal of Personality and Social Psychology",
+              "Self & Identity",
+              "Psychological Science",
+              "Evolutionary Behavioral Sciences",
+              "Developmental Psychology",
+              "Attachment & Human Development")
+
+# Get pubs gsheet
+gs_auth()
+pubs <- gs_read(gs_title("pubs")) %>% 
+  mutate(
+    citation = str_replace(citation,"Young, E. S.","<b>Young, E. S.</b>"),
+    citation = case_when(str_detect(citation, journals[1]) ~ str_replace(citation,journals[1],paste0("<em>",journals[1],"</em>")),
+                         str_detect(citation, journals[2]) ~ str_replace(citation,journals[2],paste0("<em>",journals[2],"</em>")),
+                         str_detect(citation, journals[3]) ~ str_replace(citation,journals[3],paste0("<em>",journals[3],"</em>")),
+                         str_detect(citation, journals[4]) ~ str_replace(citation,journals[4],paste0("<em>",journals[4],"</em>")),
+                         str_detect(citation, journals[5]) ~ str_replace(citation,journals[5],paste0("<em>",journals[5],"</em>")),
+                         str_detect(citation, journals[6]) ~ str_replace(citation,journals[6],paste0("<em>",journals[6],"</em>")),
+                         TRUE~citation)
+  )
+
+# Journal articles
+articles <- pubs %>% 
+  filter(pub_type=="journal") %>% 
+  arrange(desc(year)) %>% 
+  mutate(count      = 1:n()) %>% 
+  arrange(desc(year)) %>% 
+  group_by(year) %>%
+  mutate(count_year = 1:n(),
+         count_auth = ifelse(str_detect(citation,"^<b>Young, E. S."), count*-1, count_year),
+         border     = ifelse(count_year == max(count_auth),"solid","none"),
+         year_group = ifelse(count_auth == min(count_auth),year,"") %>% str_replace("-"," ")) %>% 
+  arrange(desc(year),count_auth) %>% 
+  ungroup() %>% 
+  mutate(
+    border   = ifelse(count == last(count),"",border),
+    download = ifelse(is.na(download),"", 
+                      paste0("<a class = 'label success', role = 'button', href =", download, " download =", download, ">Download</a>")),
+    abstract = ifelse(is.na(abstract),"", 
+                      paste0("<a class = 'label focus collapse-toggle'",
+                             "href = '#abstract-",year,"-",count,"' ",
+                             "role = 'button'>Abstract<span class = 'caret down'></span></a> ",
+                             ifelse(is.na(download)," ",download),
+                             "<div id = 'abstract","-",year,"-",count,"' ",
+                             "class = 'collapse-box hide bg-aluminum', ",
+                             "style = 'margin: 0; padding: 25px;'>",
+                             "<p class = 'small'><em>", abstract, "</em></p></div>",
+                             "</div>"))
+  ) 
+
+# Chapters
+chapters <- pubs %>% 
+  filter(pub_type=="chapter") %>% 
+  arrange(desc(year)) %>% 
+  mutate(count = 1:n()) %>% 
+  group_by(year) %>%
+  mutate(count      = 1:n()) %>% 
+  arrange(desc(year)) %>% 
+  group_by(year) %>%
+  mutate(count_year = 1:n(),
+         count_auth = ifelse(str_detect(citation,"^<b>Young, E. S."), count*-1, count_year),
+         border     = ifelse(count_year == max(count_auth),"solid","none"),
+         year_group = ifelse(count_auth == min(count_auth),year,"") %>% str_replace("-"," ")) %>% 
+  arrange(desc(year),count_auth) %>% 
+  ungroup() %>% 
+  mutate(
+    border   = ifelse(count == last(count),"",border),
+    download = ifelse(is.na(download),"", 
+                      paste0("<a class = 'label success', role = 'button', href =", download, " download =", download, ">Download</a>")),
+    abstract = ifelse(is.na(abstract),"", 
+                      paste0("<a class = 'label focus collapse-toggle'",
+                             "href = '#abstract-",year,"-",count,"' ",
+                             "role = 'button'>Abstract<span class = 'caret down'></span></a> ",
+                             ifelse(is.na(download)," ",download),
+                             "<div id = 'abstract","-",year,"-",count,"' ",
+                             "class = 'collapse-box hide bg-aluminum', ",
+                             "style = 'margin: 0; padding: 25px;'>",
+                             "<p class = 'small'><em>", abstract, "</em></p></div>",
+                             "</div>"))
+  ) 
+```
+
+### Employment
+
+```{r academic_positions,echo=F,message=F,warning=F}
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Academic Positions"),
+  tags$table(style = "margin: 0;",
+    tags$tr(
+      tags$td(class = "w10", tags$b(tags$em("2013-present")),style = "border-bottom-style: none"),
+      tags$td(style = "border-bottom-style: none",
+              tags$p(style = "margin: 0;","PhD Student"),
+              tags$p(style = "margin: 0;","University of Minnesota")
+      )
+    )
+  )
+)
+```
+
+### Education
+
+```{r edu,echo=F,message=F,warning=F}
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Graduate"),
+  tags$table(style = "margin: 0;",
+    tags$tr(
+      tags$td(class = "w10",tags$b(tags$em("2019 (expected)"))),
+      tags$td(
+        tags$p(style = "margin: 0;","Doctor of Philosophy"),
+        tags$p(style = "margin: 0;","University of Minnesota"),
+        tags$p(style = "margin: 0;","Major: Psychology")
+      )
+    ),
+    tags$tr(
+      tags$td(class = "w10",tags$b(tags$em("2017")), style = "border-bottom-style: none"),
+      tags$td(style = "border-bottom-style: none",
+              tags$p(style = "margin: 0;","Master's of Arts"),
+              tags$p(style = "margin: 0;","University of Minnesota"),
+              tags$p(style = "margin: 0;","Major: Psychology")
+      )
+    )
+  )
+)
+
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Undergraduate"),
+  tags$table(style = "margin: 0;",
+    tags$tr(
+      tags$td(class = "w10", tags$b(tags$em("2012")),style = "border-bottom-style: none"),
+      tags$td(style = "border-bottom-style: none",
+              tags$p(style = "margin: 0;","Bachelor of Science"),
+              tags$p(style = "margin: 0;","University of Minnesota"),
+              tags$p(style = "margin: 0;","Majors: Psychology & Spanish Studies")
+      )
+    )
+  )
+)
+```
+
+### Publications
+
+```{r peer_reviewed,echo=F,message=F,warning=F}
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Peer Reviewed Articles"),
+  tags$table(style = "margin: 0;",
+             tags$tbody(
+               tags$table(
+                 HTML(
+                   articles %>% 
+                     filter(pub_type=="journal") %>% 
+                     str_glue_data(
+                       "<tr >",
+                       "<tr >",
+                       "<td style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<b>{year_group}</b>",
+                       "</td>",
+                       "<td style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<ul><li>{citation}</li>",
+                       "<div data-component = 'collapse'>",
+                       "{abstract}",
+                       "</div>",
+                       "</ul>",
+                       "</td>",
+                       "</tr>"
+                     ) %>% 
+                     paste(collapse = "")
+                 )
+               )
+             )
+  )
+)
+```
+
+```{r chapters,echo=F,message=F,warning=F}
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Book Chapters"),
+  tags$table(style = "margin: 0;",
+             tags$tbody(
+               tags$table(
+                 HTML(
+                   chapters %>% 
+                     filter(pub_type=="chapter") %>% 
+                     str_glue_data(
+                       "<tr >",
+                       "<td style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<b>{year_group}</b>",
+                       "</td>",
+                       "<td style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<ul><li>{citation}</li>",
+                       "<div data-component = 'collapse'>",
+                       "{download}",
+                       "</div>",
+                       "</ul>",
+                       "</td>",
+                       "</tr>"
+                     ) %>% 
+                     paste(collapse = "")
+                 )
+               )
+             )
+  )
+)
+```

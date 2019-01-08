@@ -1,0 +1,38 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+
+{{ define "main" }}
+
+<div id="hero" class="wrap">
+  <h1>{{.Title}}</h1>
+    <p>{{.Params.description}}<br></p>
+</div>
+
+<div id="kube-faq">
+
+  {{.Content}}
+
+  <div id="my-collapse" class="my-collapse" data-component="collapse">
+  {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+  {{ $count := .Count }}
+      <h4><a href="#box-{{$taxonomyname}}" class="collapse-toggle large">{{$taxonomyname}} ({{ .Count }})</a></h4>
+      <div class="collapse-box hide" id="box-{{$taxonomyname}}" style="border: none;">
+          {{ range .Pages }}
+          <div style="margin-bottom: 15px;">
+            <h5><a href="{{ .Permalink }}">{{ .Title }}</a>
+             <p class="label small" style="float: right;">{{ .PublishDate.Format "January 2, 2006"}}</p>
+            </h5>
+            <p itemprop="about" style="text-align: left;">{{ .Description }}</p>
+          </div>
+          {{ end }}
+      </div>
+  {{ end }}
+  </div>
+
+</div>
+
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer" . }}
+{{ end }}

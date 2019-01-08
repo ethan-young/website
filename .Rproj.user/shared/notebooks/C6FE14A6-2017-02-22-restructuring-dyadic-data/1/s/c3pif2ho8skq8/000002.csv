@@ -1,0 +1,38 @@
+"0","indv %>% "
+"0","  split(.$dyad_id) %>% "
+"0","  map_df(function(x){"
+"0","    "
+"0","    person1 <- x %>% "
+"0","    mutate(act.par = ifelse(gender == 1,""a"",""p"")) %>% "
+"0","      gather(key,value,-dyad_id,-betw,-act.par) %>% "
+"0","      unite(new_key,key,act.par) %>% "
+"0","      spread(new_key,value)"
+"0","    "
+"0","    person2 <- x %>% "
+"0","      mutate(act.par = ifelse(gender == 1,""p"",""a"")) %>% "
+"0","      gather(key,value,-dyad_id,-betw,-act.par) %>% "
+"0","      unite(new_key,key,act.par) %>% "
+"0","      spread(new_key,value)"
+"0","    "
+"0","    bind_rows(person1,person2)"
+"0","  })"
+"2","attributes are not identical across measure variables;
+they will be dropped"
+"2","attributes are not identical across measure variables;
+they will be dropped"
+"2","attributes are not identical across measure variables;
+they will be dropped"
+"2","attributes are not identical across measure variables;
+they will be dropped"
+"2","attributes are not identical across measure variables;
+they will be dropped"
+"2","attributes are not identical across measure variables;
+they will be dropped"
+"2","attributes are not identical across measure variables;
+they will be dropped"
+"2","attributes are not identical across measure variables;
+they will be dropped"
+"2","attributes are not identical across measure variables;
+they will be dropped"
+"2","attributes are not identical across measure variables;
+they will be dropped"

@@ -1,0 +1,9 @@
+<li itemscope itemtype="http://schema.org/CreativeWork" style="border-left: 1px solid rgba(0, 0, 0, 0.1); padding-left: 10px;">
+    <h2 class="title" style="text-align: left;">
+        <a href="{{ .Permalink }}" itemprop="headline">{{ .Title }}</a>
+    </h2>
+    <p style="text-align: left;">{{ dateFormat "Monday, Jan 2, 2006" "2015-01-21"}}</p>
+    {{ if .Description }}
+    <p itemprop="about" style="text-align: left;">{{ .Description }}</p>
+    {{ end }}
+</li>

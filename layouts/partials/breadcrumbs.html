@@ -1,0 +1,15 @@
+<nav class="breadcrumbs" data-component="sticky" style = "background-color: white;" offset = 0>
+  {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+</nav>
+{{ define "breadcrumbnav" }}
+<ul>
+{{ if .p1.Parent }}
+{{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+{{ else if not .p1.IsHome }}
+{{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+{{ end }}
+<li{{ if eq .p1 .p2 }} class="active"{{ end }}>
+ {{ if not .p1.IsHome }}  &middot; <a href= "{{ .p1.Permalink }}">{{ .p1.Title }} </a> {{ end }}
+</li>
+</ul>
+{{ end }}

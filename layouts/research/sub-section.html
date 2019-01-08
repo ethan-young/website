@@ -1,0 +1,45 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+
+<div id="hero" class="wrap">
+  <h1>{{ .Title | singularize}}</h1>
+        <p>{{.Params.description}}<br></p>
+</div>
+
+<div id="kube-faq">
+
+  {{.Content}}
+
+  <div id="my-collapse" class="my-collapse" data-component="collapse">
+  {{ range .Sections }}
+      <h4><a href="#box-{{.Title}}" class="collapse-toggle large">{{.Title}}</a></h4>
+      <div class="collapse-box hide" id="box-{{.Title}}" style="border: none;">
+          {{ range .Pages }}
+          <div style="margin-bottom: 15px;">
+            <h5><a href="{{ .Permalink }}">{{ .Title }}</a>
+             <p class="label small" style="float: right;">{{ .PublishDate.Format "January 2, 2006"}}</p>
+            </h5>
+            <p itemprop="about" style="text-align: left;">{{ .Description }}</p>
+            {{with .Params.tags}}
+            <p class="small">tags:
+            {{end}}
+            {{range .Params.tags}}
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="small">{{.}}</a> &nbsp;
+            {{end}}
+            </p>
+          </div>
+          {{ end }}
+      </div>
+  {{ end }}
+  </div>
+
+  </div>
+{{ end }}
+
+
+
+{{ define "footer" }}
+  {{ partial "footer" . }}
+{{ end }}

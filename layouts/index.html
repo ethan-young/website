@@ -1,0 +1,61 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+
+<div id="main">
+  <div id="hero" style = "padding-top: 0; padding-bottom: 15px;">
+    <h1 class = "big">Ethan S. Young</h1>
+    <img class = "w25" src = "img/EthanYParsimony.jpg" style = "border-radius: 50%;">
+    <p>{{.Description}}</p>
+    <!--<div>
+      <a href="mailto:youn0737@umn.edu"><i class="far fa-envelope fa-2x success"></i></a>
+      <a target= "_blank" href = "https://scholar.google.com/citations?user=5DWz3JsAAAAJ&hl=en&authuser=1"><i class="ai ai-google-scholar ai-2x success"></i></a>
+      <a target= "_blank" href = "/cv/"><i class="ai ai-cv ai-2x success"></i></a>
+      <a target= "_blank" href = "https://osf.io/vr5yx/"><i class="ai ai-osf ai-2x success"></i></a>
+      <a target = "_blank" href = "https://www.researchgate.net/profile/Ethan_Young3"><i class="ai ai-researchgate ai-2x success"></i></a>
+    </div>-->
+  </div>
+    <div id="kube-content" class = "content" style = "border-top-width: 0; margin: auto;">
+      {{.Content}}
+    </div>
+  </div>
+  <style>
+    h5:after {
+       content: '#';
+       font-size: 15px;
+       font-weight: normal;
+       line-height: 1;
+       color: rgba(0, 0, 0, 0.3);
+       margin-left: 8px;
+       position: relative;
+       top: -1px;
+    }
+    h5 > a {
+      text-decoration: none;
+      text-align: center;
+    }
+    h4, h5{
+      text-align: left;
+    }
+    h5 > a {
+    text-decoration: none;
+    text-align: center;
+    }
+    i.far:hover{
+      color: #ff3366;
+    }
+    i.ai:hover{
+      color: #ff3366;
+    }
+  </style>
+  <script>
+    //$("h5").each(function(){
+    //  var new_href = $(this).attr("id")
+    //  var content  = $(this).html()
+    //  $(this).html("<a>" + content + "</a>")
+    //  $(this).children().attr("href", "#" + new_href)
+    //});
+  </script>
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}

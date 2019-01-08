@@ -1,0 +1,11 @@
+  <footer id="footer" style = "margin-bottom: 20px;">
+    <nav>
+      <ul>
+        <li><a href="/">{{ .Site.Title }}</a></li>
+        {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>{{ .Name }}</a></li>
+        {{end}}
+      </ul>
+    </nav>
+  </footer>

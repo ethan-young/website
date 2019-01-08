@@ -1,0 +1,14 @@
+<nav class="pagination align-center">
+    <ul>
+      {{if .Paginator.HasPrev }}
+      <li class="prev"><a href="{{ .Paginator.Prev.URL }}">&larr;</a></li>
+      {{ end }}
+
+      <li class="active"><a href="#">{{ .Paginator.PageNumber }}</a></li>
+
+      </li>
+      {{ if .Paginator.HasNext }}
+      <li class="next"><a href="{{ .Paginator.Next.URL }}">&rarr;</a></li>
+         {{ end }}
+    </ul>
+</nav>

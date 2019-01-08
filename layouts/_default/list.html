@@ -1,0 +1,31 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+
+{{ define "main" }}
+
+<div id="hero" class="wrap">
+  <h1>{{ .Title | singularize}}</h1>
+</div>
+<div id="posts">
+ {{ range .Paginator.Pages.ByDate }}
+  <div  class="example" style="margin-bottom: 15px; text-align: left;">
+    <h5><a href="{{ .Permalink }}">{{ .Title }}</a>
+     <p class="label small" style="float: right;">{{ .PublishDate.Format "January 2, 2006"}}</p>
+    </h5>
+    <p itemprop="about" style="text-align: left;">{{ .Description }}</p>
+    {{with .Params.tags}}
+    <p class="small">tags:
+    {{end}}
+    {{range .Params.tags}}
+    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="small">{{.}}</a> &nbsp;
+    {{end}}
+    </p>
+  </div>
+  {{end}}
+  <section>{{ partial "pagination" .}}</section>
+</div>
+
+{{ end }}
+{{ define "footer" }}
+  {{ partial "footer" . }}
+{{ end }}

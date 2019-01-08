@@ -1,0 +1,29 @@
+]0;~/Google Drive/Research/Websites/Kube[?1034hPSY-IT-Mac-Pro:Kube youn0737$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git init
+Initialized empty Git repository in /Users/youn0737/Google Drive/Research/Websites/Kube/.git/
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git push origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'origin'
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m.Rproj.user/[m
+	[31m.gitignore[m
+	[31mKube.Rproj[m
+	[31mconfig.toml[m
+	[31mcontent/[m
+	[31mindex.Rmd[m
+	[31mlayouts/[m
+	[31mnetlify.toml[m
+	[31mpublic/[m
+	[31mstatic/[m
+	[31mthemes/[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git add .
