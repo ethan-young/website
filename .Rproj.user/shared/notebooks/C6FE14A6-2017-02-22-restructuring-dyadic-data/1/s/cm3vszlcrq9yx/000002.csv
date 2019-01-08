@@ -1,8 +1,0 @@
-"0","dyad %>% "
-"0","  arrange(dyad_id) %>% "
-"0","  gather(key,value,-dyad_id,-betw) %>% "
-"0","  arrange(dyad_id) %>% "
-"0","  dust() %>% "
-"0","  sprinkle(part=""head"",halign=""center"",pad=5,border=""all"") %>% "
-"0","  sprinkle(part=""body"",halign=""center"",border=""all"") %>% "
-"0","  sprinkle_print_method(""html"")"

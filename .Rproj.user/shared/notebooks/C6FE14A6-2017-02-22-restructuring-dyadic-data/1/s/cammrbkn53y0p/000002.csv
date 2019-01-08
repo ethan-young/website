@@ -1,3 +1,0 @@
-"0","dyad %>% "
-"0","  gather(key,value,-dyad_id,-betw) %>% "
-"0","  separate(key,c(""key"",""gender""),sep = ""_"")"

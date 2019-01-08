@@ -1,8 +1,0 @@
-"0","indv_dyad <- indv %>%                              # To be explained soon ;)"
-"0","  arrange(dyad_id) %>%                             # "
-"0","  gather(key,value,-dyad_id,-betw,-gender) %>%     #"
-"0","  mutate(gender = ifelse(gender == 1,""h"",""w"")) %>% #"
-"0","  unite(new_key,key,gender,sep = ""_"",remove=T) %>% #"
-"0","  spread(new_key,value)                            #"
-"2","attributes are not identical across measure variables;
-they will be dropped"
