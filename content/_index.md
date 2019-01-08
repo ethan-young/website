@@ -30,7 +30,7 @@ I built this site because I wanted a semi-permanent place to store my publicatio
 
 In my <a href="/posts/">posts</a> section, I document some of tools that I create and code that I write in R and occasionally post case-studies that use them. These are mostly for my own memory and it's nice to have them in one location. Finally, I also use the posts section to write out my thoughts on various topics.
 
-<b>Note:</b> This site was built using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown" target="_blank">blogdown</a> using the theme <a href="https://themes.gohugo.io/kube/" target="_blank">Kube</a>. I adapted the theme to my taste and update it using <a href="https://cran.rstudio.com/" target="_blank">R</a> and <a href = "http://www.rstudio.com/" target="_blank">Rstudio</a>. The source code for the site can be found on <a href="https://github.com/ethan-young" target="_blank">github</a>.
+<b>Note:</b> This site was built using <a href="https://gohugo.io" target="_blank">Hugo</a> and <a href="https://bookdown.org/yihui/blogdown" target="_blank">blogdown</a> using the theme <a href="https://themes.gohugo.io/kube/" target="_blank">Kube</a>. I adapted the theme to my taste and update it using <a href="https://cran.rstudio.com/" target="_blank">R</a> and <a href = "http://www.rstudio.com/" target="_blank">Rstudio</a>. The source code for the site can be found on <a href="https://github.com/ethan-young/website" target="_blank">github</a>.
 
   </div>
   
