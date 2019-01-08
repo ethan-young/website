@@ -40,4 +40,4 @@ Paginate = 4
   tag = "tags"
   projects = "projects"
 
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$",".Rproj.user/"]

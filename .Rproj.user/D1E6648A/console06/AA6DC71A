@@ -1,375 +1,4 @@
 
-	[32mnew file:   static/css/kube.legenda.css[m
-	[32mnew file:   static/css/kube.min.css[m
-	[32mnew file:   static/css/master.css[m
-	[32mnew file:   static/font/Lato-Black.woff[m
-	[32mnew file:   static/font/Lato-Bold.woff[m
-	[32mnew file:   static/font/Lato-BoldItalic.woff[m
-	[32mnew file:   static/font/Lato-Italic.woff[m
-	[32mnew file:   static/font/Lato-Regular.woff[m
-	[32mnew file:   static/font/Lato-Semibold.woff[m
-	[32mnew file:   static/font/Lato-SemiboldItalic.woff[m
-	[32mnew file:   static/highlight/CHANGES.md[m
-	[32mnew file:   static/highlight/LICENSE[m
-	[32mnew file:   static/highlight/README.md[m
-	[32mnew file:   static/highlight/README.ru.md[m
-	[32mnew file:   static/highlight/highlight.pack.js[m
-	[32mnew file:   static/highlight/styles/agate.css[m
-	[32mnew file:   static/highlight/styles/androidstudio.css[m
-	[32mnew file:   static/highlight/styles/arduino-light.css[m
-	[32mnew file:   static/highlight/styles/arta.css[m
-	[32mnew file:   static/highlight/styles/ascetic.css[m
-	[32mnew file:   static/highlight/styles/atelier-cave-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-cave-light.css[m
-	[32mnew file:   static/highlight/styles/atelier-dune-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-dune-light.css[m
-	[32mnew file:   static/highlight/styles/atelier-estuary-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-estuary-light.css[m
-	[32mnew file:   static/highlight/styles/atelier-forest-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-forest-light.css[m
-	[32mnew file:   static/highlight/styles/atelier-heath-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-heath-light.css[m
-	[32mnew file:   static/highlight/styles/atelier-lakeside-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-lakeside-light.css[m
-	[32mnew file:   static/highlight/styles/atelier-plateau-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-plateau-light.css[m
-	[32mnew file:   static/highlight/styles/atelier-savanna-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-savanna-light.css[m
-	[32mnew file:   static/highlight/styles/atelier-seaside-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-seaside-light.css[m
-	[32mnew file:   static/highlight/styles/atelier-sulphurpool-dark.css[m
-	[32mnew file:   static/highlight/styles/atelier-sulphurpool-light.css[m
-	[32mnew file:   static/highlight/styles/atom-one-dark.css[m
-	[32mnew file:   static/highlight/styles/atom-one-light.css[m
-	[32mnew file:   static/highlight/styles/brown-paper.css[m
-	[32mnew file:   static/highlight/styles/brown-papersq.png[m
-	[32mnew file:   static/highlight/styles/codepen-embed.css[m
-	[32mnew file:   static/highlight/styles/color-brewer.css[m
-	[32mnew file:   static/highlight/styles/darcula.css[m
-	[32mnew file:   static/highlight/styles/dark.css[m
-	[32mnew file:   static/highlight/styles/darkula.css[m
-	[32mnew file:   static/highlight/styles/default.css[m
-	[32mnew file:   static/highlight/styles/docco.css[m
-	[32mnew file:   static/highlight/styles/dracula.css[m
-	[32mnew file:   static/highlight/styles/far.css[m
-	[32mnew file:   static/highlight/styles/foundation.css[m
-	[32mnew file:   static/highlight/styles/github-gist.css[m
-	[32mnew file:   static/highlight/styles/github.css[m
-	[32mnew file:   static/highlight/styles/googlecode.css[m
-	[32mnew file:   static/highlight/styles/grayscale.css[m
-	[32mnew file:   static/highlight/styles/gruvbox-dark.css[m
-	[32mnew file:   static/highlight/styles/gruvbox-light.css[m
-	[32mnew file:   static/highlight/styles/hopscotch.css[m
-	[32mnew file:   static/highlight/styles/hybrid.css[m
-	[32mnew file:   static/highlight/styles/idea.css[m
-	[32mnew file:   static/highlight/styles/ir-black.css[m
-	[32mnew file:   static/highlight/styles/kimbie.dark.css[m
-	[32mnew file:   static/highlight/styles/kimbie.light.css[m
-	[32mnew file:   static/highlight/styles/magula.css[m
-	[32mnew file:   static/highlight/styles/mono-blue.css[m
-	[32mnew file:   static/highlight/styles/monokai-sublime.css[m
-	[32mnew file:   static/highlight/styles/monokai.css[m
-	[32mnew file:   static/highlight/styles/obsidian.css[m
-	[32mnew file:   static/highlight/styles/ocean.css[m
-	[32mnew file:   static/highlight/styles/paraiso-dark.css[m
-	[32mnew file:   static/highlight/styles/paraiso-light.css[m
-	[32mnew file:   static/highlight/styles/pojoaque.css[m
-	[32mnew file:   static/highlight/styles/pojoaque.jpg[m
-	[32mnew file:   static/highlight/styles/purebasic.css[m
-	[32mnew file:   static/highlight/styles/qtcreator_dark.css[m
-	[32mnew file:   static/highlight/styles/qtcreator_light.css[m
-	[32mnew file:   static/highlight/styles/railscasts.css[m
-	[32mnew file:   static/highlight/styles/rainbow.css[m
-	[32mnew file:   static/highlight/styles/routeros.css[m
-	[32mnew file:   static/highlight/styles/school-book.css[m
-	[32mnew file:   static/highlight/styles/school-book.png[m
-	[32mnew file:   static/highlight/styles/solarized-dark.css[m
-	[32mnew file:   static/highlight/styles/solarized-light.css[m
-	[32mnew file:   static/highlight/styles/sunburst.css[m
-	[32mnew file:   static/highlight/styles/tomorrow-night-blue.css[m
-	[32mnew file:   static/highlight/styles/tomorrow-night-bright.css[m
-	[32mnew file:   static/highlight/styles/tomorrow-night-eighties.css[m
-	[32mnew file:   static/highlight/styles/tomorrow-night.css[m
-	[32mnew file:   static/highlight/styles/tomorrow.css[m
-	[32mnew file:   static/highlight/styles/vs.css[m
-	[32mnew file:   static/highlight/styles/vs2015.css[m
-	[32mnew file:   static/highlight/styles/xcode.css[m
-	[32mnew file:   static/highlight/styles/xt256.css[m
-	[32mnew file:   static/highlight/styles/zenburn.css[m
-	[32mnew file:   static/img/EthanYParsimony.jpg[m
-	[32mnew file:   static/img/archive.png[m
-	[32mnew file:   static/img/archive.svg[m
-	[32mnew file:   static/js/auto-complete.js[m
-	[32mnew file:   static/js/jquery-2.1.4.min.js[m
-	[32mnew file:   static/js/kube.js[m
-	[32mnew file:   static/js/kube.legenda.js[m
-	[32mnew file:   static/js/kube.min.js[m
-	[32mnew file:   static/js/lunr.min.js[m
-	[32mnew file:   static/js/master.js[m
-	[32mnew file:   static/js/search.js[m
-	[32mnew file:   static/js/tocbot.min.js[m
-	[32mnew file:   static/posts/2018-12-23-sem-diagrams-for-lavaan-models_files/figure-html/unnamed-chunk-7-1.png[m
-	[32mnew file:   themes/kube/.gitignore[m
-	[32mnew file:   themes/kube/LICENSE.md[m
-	[32mnew file:   themes/kube/README.md[m
-	[32mnew file:   themes/kube/archetypes/blog.md[m
-	[32mnew file:   themes/kube/archetypes/docs.md[m
-	[32mnew file:   themes/kube/exampleSite/config.toml[m
-	[32mnew file:   themes/kube/exampleSite/content/_index.md[m
-	[32mnew file:   themes/kube/exampleSite/content/account.md[m
-	[32mnew file:   themes/kube/exampleSite/content/blog/collapse.md[m
-	[32mnew file:   themes/kube/exampleSite/content/blog/inline-style.md[m
-	[32mnew file:   themes/kube/exampleSite/content/blog/messages.md[m
-	[32mnew file:   themes/kube/exampleSite/content/blog/prototyping.md[m
-	[32mnew file:   themes/kube/exampleSite/content/blog/typography.md[m
-	[32mnew file:   themes/kube/exampleSite/content/blog/welcome.md[m
-	[32mnew file:   themes/kube/exampleSite/content/company.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/animation.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/breadcrumbs.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/buttons.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/collapse.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/colors.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/custom-plugins.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/dropdown.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/forms.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/grid.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/labels.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/messages.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/mixins.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/modal.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/offcanvas.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/pagination.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/quick-start.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/sizing.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/sticky.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/tables.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/tabs.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/toggleme.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/typography.md[m
-	[32mnew file:   themes/kube/exampleSite/content/docs/utils.md[m
-	[32mnew file:   themes/kube/exampleSite/content/faq/_index.md[m
-	[32mnew file:   themes/kube/exampleSite/content/password-recovery.md[m
-	[32mnew file:   themes/kube/exampleSite/static/.gitkeep[m
-	[32mnew file:   themes/kube/images/docs.png[m
-	[32mnew file:   themes/kube/images/faq.png[m
-	[32mnew file:   themes/kube/images/list-docs.png[m
-	[32mnew file:   themes/kube/images/post.png[m
-	[32mnew file:   themes/kube/images/screenshot.png[m
-	[32mnew file:   themes/kube/images/signin.png[m
-	[32mnew file:   themes/kube/images/tn.png[m
-	[32mnew file:   themes/kube/layouts/404.html[m
-	[32mnew file:   themes/kube/layouts/_default/baseof.html[m
-	[32mnew file:   themes/kube/layouts/_default/list.html[m
-	[32mnew file:   themes/kube/layouts/_default/single.html[m
-	[32mnew file:   themes/kube/layouts/blog/single.html[m
-	[32mnew file:   themes/kube/layouts/docs/single.html[m
-	[32mnew file:   themes/kube/layouts/index.html[m
-	[32mnew file:   themes/kube/layouts/partials/favicon.html[m
-	[32mnew file:   themes/kube/layouts/partials/footer.html[m
-	[32mnew file:   themes/kube/layouts/partials/header.html[m
-	[32mnew file:   themes/kube/layouts/partials/meta/name-author.html[m
-	[32mnew file:   themes/kube/layouts/partials/meta/ogimage.html[m
-	[32mnew file:   themes/kube/layouts/partials/page-summary.html[m
-	[32mnew file:   themes/kube/layouts/partials/pagination.html[m
-	[32mnew file:   themes/kube/layouts/partials/post/byauthor.html[m
-	[32mnew file:   themes/kube/layouts/partials/post/category-link.html[m
-	[32mnew file:   themes/kube/layouts/partials/post/meta.html[m
-	[32mnew file:   themes/kube/layouts/partials/post/related-content.html[m
-	[32mnew file:   themes/kube/layouts/partials/post/tag-link.html[m
-	[32mnew file:   themes/kube/layouts/partials/scripts/animation.html[m
-	[32mnew file:   themes/kube/layouts/partials/site-verification.html[m
-	[32mnew file:   themes/kube/layouts/partials/toc.html[m
-	[32mnew file:   themes/kube/layouts/section/docs.html[m
-	[32mnew file:   themes/kube/layouts/section/faq.html[m
-	[32mnew file:   themes/kube/static/css/custom.css[m
-	[32mnew file:   themes/kube/static/css/font.css[m
-	[32mnew file:   themes/kube/static/css/highlight.css[m
-	[32mnew file:   themes/kube/static/css/kube.css[m
-	[32mnew file:   themes/kube/static/css/kube.demo.css[m
-	[32mnew file:   themes/kube/static/css/kube.legenda.css[m
-	[32mnew file:   themes/kube/static/css/kube.min.css[m
-	[32mnew file:   themes/kube/static/css/master.css[m
-	[32mnew file:   themes/kube/static/font/Lato-Black.woff[m
-	[32mnew file:   themes/kube/static/font/Lato-Bold.woff[m
-	[32mnew file:   themes/kube/static/font/Lato-BoldItalic.woff[m
-	[32mnew file:   themes/kube/static/font/Lato-Italic.woff[m
-	[32mnew file:   themes/kube/static/font/Lato-Regular.woff[m
-	[32mnew file:   themes/kube/static/font/Lato-Semibold.woff[m
-	[32mnew file:   themes/kube/static/font/Lato-SemiboldItalic.woff[m
-	[32mnew file:   themes/kube/static/img/common/icon-twitter.png[m
-	[32mnew file:   themes/kube/static/img/common/logo.png[m
-	[32mnew file:   themes/kube/static/img/common/logx2.png[m
-	[32mnew file:   themes/kube/static/img/favicons/logo-384x384.png[m
-	[32mnew file:   themes/kube/static/img/icon-minimalism.png[m
-	[32mnew file:   themes/kube/static/img/icon-typo.png[m
-	[32mnew file:   themes/kube/static/img/kube/brand.png[m
-	[32mnew file:   themes/kube/static/img/kube/icon-baseline.png[m
-	[32mnew file:   themes/kube/static/img/kube/icon-minimalism.png[m
-	[32mnew file:   themes/kube/static/img/kube/icon-typo.png[m
-	[32mnew file:   themes/kube/static/img/kube/typography/01.png[m
-	[32mnew file:   themes/kube/static/img/kube/typography/02.png[m
-	[32mnew file:   themes/kube/static/js/jquery-2.1.4.min.js[m
-	[32mnew file:   themes/kube/static/js/kube.js[m
-	[32mnew file:   themes/kube/static/js/kube.legenda.js[m
-	[32mnew file:   themes/kube/static/js/kube.min.js[m
-	[32mnew file:   themes/kube/static/js/master.js[m
-	[32mnew file:   themes/kube/static/js/tocbot.min.js[m
-	[32mnew file:   themes/kube/theme.toml[m
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A[m
-
-]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git commit -m "first commit"
-[master (root-commit) c80a3ca] first commit
- 653 files changed, 87004 insertions(+)
- create mode 100644 .Rproj.user/737ABAC8/build_options
- create mode 100644 .Rproj.user/737ABAC8/console06/INDEX001
- create mode 100644 .Rproj.user/737ABAC8/pcs/files-pane.pper
- create mode 100644 .Rproj.user/737ABAC8/pcs/packages-pane.pper
- create mode 100644 .Rproj.user/737ABAC8/pcs/source-pane.pper
- create mode 100644 .Rproj.user/737ABAC8/pcs/windowlayoutstate.pper
- create mode 100644 .Rproj.user/737ABAC8/pcs/workbench-pane.pper
- create mode 100644 .Rproj.user/737ABAC8/rmd-outputs
- create mode 100644 .Rproj.user/737ABAC8/saved_source_markers
- create mode 100644 .Rproj.user/737ABAC8/sources/prop/3579D422
- create mode 100644 .Rproj.user/737ABAC8/sources/prop/401C3848
- create mode 100644 .Rproj.user/737ABAC8/sources/prop/41BC0C77
- create mode 100644 .Rproj.user/737ABAC8/sources/prop/INDEX
- create mode 100644 .Rproj.user/D1E6648A/console06/AA6DC71A
- create mode 100644 .Rproj.user/D1E6648A/console06/AA6DC71A.env
- create mode 100644 .Rproj.user/D1E6648A/console06/INDEX001
- create mode 100644 .Rproj.user/D1E6648A/pcs/files-pane.pper
- create mode 100644 .Rproj.user/D1E6648A/pcs/packages-pane.pper
- create mode 100644 .Rproj.user/D1E6648A/pcs/source-pane.pper
- create mode 100644 .Rproj.user/D1E6648A/pcs/windowlayoutstate.pper
- create mode 100644 .Rproj.user/D1E6648A/pcs/workbench-pane.pper
- create mode 100644 .Rproj.user/D1E6648A/persistent-state
- create mode 100644 .Rproj.user/D1E6648A/rmd-outputs
- create mode 100644 .Rproj.user/D1E6648A/saved_source_markers
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/105D4D4E
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/1B6661EB
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/1C1709FB
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/1E207D5F
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/217F8A37
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/231ACC97
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/23221FE8
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/2A67F31
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/3545AEDC
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/3951FA2
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/3A988DC5
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/3E81865C
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/44AD3D59
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/469119DD
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/480BA446
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/4CDF85F7
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/4D180201
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/4F5375A8
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/53F91DCA
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/55B17568
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/5D7DD5A5
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/62121087
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/675B916E
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/6BB2A787
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/702C787F
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/730A9988
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/73BE49D5
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/7476E862
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/75DC37C8
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/768BCAF0
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/76F0B037
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/7A7159F2
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/7E10609D
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/7ECD8B89
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/8C804E9E
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/8D29DF02
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/900EF65
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/9151670C
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/9B73092A
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/9B7B7504
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/A4A04DB
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/A4FB8ED3
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/A5248025
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/A99D3FA2
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/B0DA2E6C
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/B3D82D65
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/B8B3640E
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/BBD4CD36
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/C0EBBE1D
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/C1C46BC3
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/C2158119
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/C7EC9D32
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/CB3B50D2
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/CD6E54BB
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/DBE456EA
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/DD1D9EA0
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/E0F50502
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/E4B96ED
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/E605B85F
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/E7DC555D
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/F1BD2157
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/F2A46F87
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/FDF455EB
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/FF3AA1D9
- create mode 100644 .Rproj.user/D1E6648A/sources/prop/INDEX
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/15335379-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/1D8A53D8-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/1ECB82AF-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/233A26A1-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/25274E17-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/31569C91-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/4FA89B25-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/56AA269-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/57C04017-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/5F5D7979-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/8185D55D-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/95ABD3C3-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/A1F7780-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/A9142EF6-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/B1E2EC44
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/B1E2EC44-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/B4D77510-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/B8EFF1E0-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/BCACCD05-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/C2FB4CCB-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/C58ABC07-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/D6EF5C1E-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/F8124595-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/F8B67FE8-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/FCAC482A-contents
- create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/lock_file
- create mode 100644 .Rproj.user/shared/notebooks/5771B071-_index/1/s/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/B1C6E40B-_index/1/s/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c1qnj5rf0mpzn/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c2psw5np3yp7g/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c397rfmkoy5yh/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c3pif2ho8skq8/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c3pif2ho8skq8/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c3pif2ho8skq8/000003.rdf
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c6tc48790v801/000008.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c6xx7wpsw9hzf/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c7i50om40kvyt/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c8mlllriqnezd/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c93uxoz03aj2n/000006.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c9tvx2209j6fg/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c9yt19u1c51gg/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cakuojtu6t2it/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cammrbkn53y0p/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cammrbkn53y0p/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cammrbkn53y0p/000003.rdf
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ccv36vd3z8wh9/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cejz335x1scff/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cez0szh8kzxht/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cfpxa7vrzbg82/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cfpxa7vrzbg82/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cfpxa7vrzbg82/000003.rdf
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cgyfrls5wlvza/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ciw8xvslmb3b9/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ciw8xvslmb3b9/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ciw8xvslmb3b9/000003.rdf
  create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ciycdz6vcczq4/000002.csv
  create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ck7pgclmovbby/000002.csv
  create mode 100644 .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ck9ea77rzsazp/000002.csv
@@ -1358,3 +987,100 @@ remote: Resolving deltas:   0% (0/10)   [Kremote: Resolving deltas:  10% (1/10
 To https://github.com/ethan-young/website.git
    9b7564c..8da4b25  master -> master
 ]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ [KPSY-IT-Mac-Pro:Kube youn0737$ git add.[K .
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git commit m[K-m ""u"p"d"a"t"e" "g"i"t"[1P"[1P"[1P"."g"i"t"i"g"n"o"r"e"
+[master 0843232] update .gitignore
+ 3 files changed, 16 insertions(+), 4 deletions(-)
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git [K[K[K[Kgit commit -m "update .gitignore"add .[Kpush origin master
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 1.08 KiB | 1.08 MiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+To https://github.com/ethan-young/website.git
+   8da4b25..0843232  master -> master
+[KPSY-IT-Mac-Pro:Kube youn0737$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/D1E6648A/pcs/workbench-pane.pper[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/E0F50502[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ [KPSY-IT-Mac-Pro:Kube youn0737$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A.env[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/D1E6648A/pcs/workbench-pane.pper[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/E0F50502[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/INDEX[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git a[Kstatus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A.env[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/D1E6648A/pcs/workbench-pane.pper[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/E0F50502[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/INDEX[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A.env[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/D1E6648A/pcs/workbench-pane.pper[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/E0F50502[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/INDEX[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A.env[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/D1E6648A/pcs/workbench-pane.pper[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/E0F50502[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/FF3AA1D9[m
+	[31mmodified:   .Rproj.user/D1E6648A/sources/prop/INDEX[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   config.toml[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git statuspush origin mastercommit -m "update .gitignore"add .[K
