@@ -1,478 +1,4 @@
-]0;~/Google Drive/Research/Websites/Kube[?1034hPSY-IT-Mac-Pro:Kube youn0737$ git status
-fatal: Not a git repository (or any of the parent directories): .git
-]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git init
-Initialized empty Git repository in /Users/youn0737/Google Drive/Research/Websites/Kube/.git/
-]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git push origin master
-error: src refspec master does not match any.
-error: failed to push some refs to 'origin'
-]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git status
-On branch master
 
-No commits yet
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	[31m.Rproj.user/[m
-	[31m.gitignore[m
-	[31mKube.Rproj[m
-	[31mconfig.toml[m
-	[31mcontent/[m
-	[31mindex.Rmd[m
-	[31mlayouts/[m
-	[31mnetlify.toml[m
-	[31mpublic/[m
-	[31mstatic/[m
-	[31mthemes/[m
-
-nothing added to commit but untracked files present (use "git add" to track)
-]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git add .
-
-]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git status
-On branch master
-
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-
-	[32mnew file:   .Rproj.user/737ABAC8/build_options[m
-	[32mnew file:   .Rproj.user/737ABAC8/console06/INDEX001[m
-	[32mnew file:   .Rproj.user/737ABAC8/pcs/files-pane.pper[m
-	[32mnew file:   .Rproj.user/737ABAC8/pcs/packages-pane.pper[m
-	[32mnew file:   .Rproj.user/737ABAC8/pcs/source-pane.pper[m
-	[32mnew file:   .Rproj.user/737ABAC8/pcs/windowlayoutstate.pper[m
-	[32mnew file:   .Rproj.user/737ABAC8/pcs/workbench-pane.pper[m
-	[32mnew file:   .Rproj.user/737ABAC8/rmd-outputs[m
-	[32mnew file:   .Rproj.user/737ABAC8/saved_source_markers[m
-	[32mnew file:   .Rproj.user/737ABAC8/sources/prop/3579D422[m
-	[32mnew file:   .Rproj.user/737ABAC8/sources/prop/401C3848[m
-	[32mnew file:   .Rproj.user/737ABAC8/sources/prop/41BC0C77[m
-	[32mnew file:   .Rproj.user/737ABAC8/sources/prop/INDEX[m
-	[32mnew file:   .Rproj.user/D1E6648A/console06/AA6DC71A[m
-	[32mnew file:   .Rproj.user/D1E6648A/console06/AA6DC71A.env[m
-	[32mnew file:   .Rproj.user/D1E6648A/console06/INDEX001[m
-	[32mnew file:   .Rproj.user/D1E6648A/pcs/files-pane.pper[m
-	[32mnew file:   .Rproj.user/D1E6648A/pcs/packages-pane.pper[m
-	[32mnew file:   .Rproj.user/D1E6648A/pcs/source-pane.pper[m
-	[32mnew file:   .Rproj.user/D1E6648A/pcs/windowlayoutstate.pper[m
-	[32mnew file:   .Rproj.user/D1E6648A/pcs/workbench-pane.pper[m
-	[32mnew file:   .Rproj.user/D1E6648A/persistent-state[m
-	[32mnew file:   .Rproj.user/D1E6648A/rmd-outputs[m
-	[32mnew file:   .Rproj.user/D1E6648A/saved_source_markers[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/105D4D4E[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/1B6661EB[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/1C1709FB[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/1E207D5F[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/217F8A37[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/231ACC97[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/23221FE8[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/2A67F31[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/3545AEDC[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/3951FA2[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/3A988DC5[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/3E81865C[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/44AD3D59[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/469119DD[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/480BA446[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/4CDF85F7[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/4D180201[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/4F5375A8[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/53F91DCA[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/55B17568[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/5D7DD5A5[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/62121087[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/675B916E[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/6BB2A787[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/702C787F[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/730A9988[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/73BE49D5[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/7476E862[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/75DC37C8[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/768BCAF0[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/76F0B037[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/7A7159F2[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/7E10609D[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/7ECD8B89[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/8C804E9E[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/8D29DF02[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/900EF65[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/9151670C[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/9B73092A[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/9B7B7504[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/A4A04DB[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/A4FB8ED3[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/A5248025[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/A99D3FA2[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/B0DA2E6C[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/B3D82D65[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/B8B3640E[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/BBD4CD36[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/C0EBBE1D[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/C1C46BC3[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/C2158119[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/C7EC9D32[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/CB3B50D2[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/CD6E54BB[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/DBE456EA[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/DD1D9EA0[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/E0F50502[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/E4B96ED[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/E605B85F[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/E7DC555D[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/F1BD2157[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/F2A46F87[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/FDF455EB[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/FF3AA1D9[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/prop/INDEX[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/15335379-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/1D8A53D8-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/1ECB82AF-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/233A26A1-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/25274E17-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/31569C91-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/4FA89B25-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/56AA269-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/57C04017-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/5F5D7979-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/8185D55D-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/95ABD3C3-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/A1F7780-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/A9142EF6-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/B1E2EC44[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/B1E2EC44-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/B4D77510-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/B8EFF1E0-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/BCACCD05-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/C2FB4CCB-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/C58ABC07-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/D6EF5C1E-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/F8124595-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/F8B67FE8-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/FCAC482A-contents[m
-	[32mnew file:   .Rproj.user/D1E6648A/sources/s-C3F70A63/lock_file[m
-	[32mnew file:   .Rproj.user/shared/notebooks/5771B071-_index/1/s/chunks.json[m
-	[32mnew file:   .Rproj.user/shared/notebooks/B1C6E40B-_index/1/s/chunks.json[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c1qnj5rf0mpzn/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c2psw5np3yp7g/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c397rfmkoy5yh/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c3pif2ho8skq8/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c3pif2ho8skq8/000003.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c3pif2ho8skq8/000003.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c6tc48790v801/000008.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c6xx7wpsw9hzf/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c7i50om40kvyt/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c8mlllriqnezd/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c93uxoz03aj2n/000006.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c9tvx2209j6fg/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/c9yt19u1c51gg/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cakuojtu6t2it/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cammrbkn53y0p/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cammrbkn53y0p/000003.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cammrbkn53y0p/000003.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ccv36vd3z8wh9/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cejz335x1scff/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cez0szh8kzxht/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cfpxa7vrzbg82/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cfpxa7vrzbg82/000003.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cfpxa7vrzbg82/000003.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cgyfrls5wlvza/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/chunks.json[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ciw8xvslmb3b9/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ciw8xvslmb3b9/000003.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ciw8xvslmb3b9/000003.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ciycdz6vcczq4/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ck7pgclmovbby/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ck9ea77rzsazp/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/ckwq3aoazrd5c/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/clpg7l2xwh9tt/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/clrddihpsdgh9/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/clyo870wcc0xb/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cm3vszlcrq9yx/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cmyhy3g9g6eot/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cowaq38yvj7zi/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cowaq38yvj7zi/000003.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cowaq38yvj7zi/000003.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cpqsv1zgkbcdn/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/crtxmb7dad7fl/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/crtxmb7dad7fl/000003.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/crtxmb7dad7fl/000003.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/csetup_chunk/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/csfnbpbtriuw0/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/csxayggceom5e/000007.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/csxayggceom5e/000007.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cu5bphli11qpc/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cu5bphli11qpc/000003.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cu5bphli11qpc/000003.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cuck1qwy9xbot/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cudkcvcd6qqqu/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cudkcvcd6qqqu/000003.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cudkcvcd6qqqu/000003.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cvh7l8hq2ltjm/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cvh7l8hq2ltjm/000003.metadata[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cvh7l8hq2ltjm/000003.rdf[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cy5t8bkm4sumb/000015.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cynvq2h5m59f2/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/C6FE14A6-2017-02-22-restructuring-dyadic-data/1/s/cztscym9qhjsf/000002.csv[m
-	[32mnew file:   .Rproj.user/shared/notebooks/EFD19D06-2018-12-23-sem-diagrams-for-lavaan-models/1/s/chunks.json[m
-	[32mnew file:   .Rproj.user/shared/notebooks/F4995CE-2017-10-05-dplyr/1/s/chunks.json[m
-	[32mnew file:   .Rproj.user/shared/notebooks/patch-chunk-names[m
-	[32mnew file:   .Rproj.user/shared/notebooks/paths[m
-	[32mnew file:   .gitignore[m
-	[32mnew file:   Kube.Rproj[m
-	[32mnew file:   config.toml[m
-	[32mnew file:   content/CV/2015_JPSP_Mittal.pdf[m
-	[32mnew file:   content/CV/2017_EBS_Szepsenwol.pdf[m
-	[32mnew file:   content/CV/2017_S&I_Young.pdf[m
-	[32mnew file:   content/CV/2017_chapter_Simpson_LHTpersonality.pdf[m
-	[32mnew file:   content/CV/2018_DP_Martin.pdf[m
-	[32mnew file:   content/CV/2018_JPSP_Young.pdf[m
-	[32mnew file:   content/CV/_index.Rmd[m
-	[32mnew file:   content/CV/_index.html[m
-	[32mnew file:   content/_index.md[m
-	[32mnew file:   content/about/_index.md[m
-	[32mnew file:   content/archive/_index.md[m
-	[32mnew file:   content/posts/2017-02-22-restructuring-dyadic-data.Rmd[m
-	[32mnew file:   content/posts/2017-02-22-restructuring-dyadic-data.html[m
-	[32mnew file:   content/posts/2017-10-05-dplyr.Rmd[m
-	[32mnew file:   content/posts/2017-10-05-dplyr.html[m
-	[32mnew file:   content/posts/2018-12-23-sem-diagrams-for-lavaan-models.Rmd[m
-	[32mnew file:   content/posts/2018-12-23-sem-diagrams-for-lavaan-models.html[m
-	[32mnew file:   content/posts/_index.md[m
-	[32mnew file:   content/research/_index.md[m
-	[32mnew file:   content/research/cognition/_index.md[m
-	[32mnew file:   content/research/metabolic-traits/_index.md[m
-	[32mnew file:   content/research/stress-physiology/_index.md[m
-	[32mnew file:   content/resources/_index.Rmd[m
-	[32mnew file:   content/resources/_index.html[m
-	[32mnew file:   content/tags/_index.md[m
-	[32mnew file:   index.Rmd[m
-	[32mnew file:   layouts/404.html[m
-	[32mnew file:   layouts/_default/baseof.html[m
-	[32mnew file:   layouts/_default/list.html[m
-	[32mnew file:   layouts/_default/single.html[m
-	[32mnew file:   layouts/index.html[m
-	[32mnew file:   layouts/index.json[m
-	[32mnew file:   layouts/partials/breadcrumbs.html[m
-	[32mnew file:   layouts/partials/favicon.html[m
-	[32mnew file:   layouts/partials/footer.html[m
-	[32mnew file:   layouts/partials/header.html[m
-	[32mnew file:   layouts/partials/meta/name-author.html[m
-	[32mnew file:   layouts/partials/meta/ogimage.html[m
-	[32mnew file:   layouts/partials/page-summary.html[m
-	[32mnew file:   layouts/partials/pagination.html[m
-	[32mnew file:   layouts/partials/post/byauthor.html[m
-	[32mnew file:   layouts/partials/post/category-link.html[m
-	[32mnew file:   layouts/partials/post/meta.html[m
-	[32mnew file:   layouts/partials/post/related-content.html[m
-	[32mnew file:   layouts/partials/post/tag-link.html[m
-	[32mnew file:   layouts/partials/scripts/animation.html[m
-	[32mnew file:   layouts/partials/site-verification.html[m
-	[32mnew file:   layouts/partials/toc.html[m
-	[32mnew file:   layouts/posts/single.html[m
-	[32mnew file:   layouts/research/list.html[m
-	[32mnew file:   layouts/research/research.html[m
-	[32mnew file:   layouts/research/single.html[m
-	[32mnew file:   layouts/research/sub-section.html[m
-	[32mnew file:   layouts/section/CV.html[m
-	[32mnew file:   layouts/section/about.html[m
-	[32mnew file:   layouts/section/archive.html[m
-	[32mnew file:   layouts/section/posts.html[m
-	[32mnew file:   layouts/section/resources.html[m
-	[32mnew file:   layouts/tags/list.html[m
-	[32mnew file:   netlify.toml[m
-	[32mnew file:   public/.gitkeep[m
-	[32mnew file:   public/about/index.html[m
-	[32mnew file:   public/about/index.xml[m
-	[32mnew file:   public/archive/index.html[m
-	[32mnew file:   public/archive/index.xml[m
-	[32mnew file:   public/css/auto-complete.css[m
-	[32mnew file:   public/css/custom.css[m
-	[32mnew file:   public/css/font.css[m
-	[32mnew file:   public/css/highlight.css[m
-	[32mnew file:   public/css/kube.css[m
-	[32mnew file:   public/css/kube.demo.css[m
-	[32mnew file:   public/css/kube.legenda.css[m
-	[32mnew file:   public/css/kube.min.css[m
-	[32mnew file:   public/css/master.css[m
-	[32mnew file:   public/cv/2015_JPSP_Mittal.pdf[m
-	[32mnew file:   public/cv/2017_EBS_Szepsenwol.pdf[m
-	[32mnew file:   public/cv/2017_S&I_Young.pdf[m
-	[32mnew file:   public/cv/2017_chapter_Simpson_LHTpersonality.pdf[m
-	[32mnew file:   public/cv/2018_DP_Martin.pdf[m
-	[32mnew file:   public/cv/2018_JPSP_Young.pdf[m
-	[32mnew file:   public/cv/_index.Rmd[m
-	[32mnew file:   public/cv/index.html[m
-	[32mnew file:   public/cv/index.xml[m
-	[32mnew file:   public/cv/page/1/index.html[m
-	[32mnew file:   public/font/Lato-Black.woff[m
-	[32mnew file:   public/font/Lato-Bold.woff[m
-	[32mnew file:   public/font/Lato-BoldItalic.woff[m
-	[32mnew file:   public/font/Lato-Italic.woff[m
-	[32mnew file:   public/font/Lato-Regular.woff[m
-	[32mnew file:   public/font/Lato-Semibold.woff[m
-	[32mnew file:   public/font/Lato-SemiboldItalic.woff[m
-	[32mnew file:   public/highlight/CHANGES.md[m
-	[32mnew file:   public/highlight/LICENSE[m
-	[32mnew file:   public/highlight/README.md[m
-	[32mnew file:   public/highlight/README.ru.md[m
-	[32mnew file:   public/highlight/highlight.pack.js[m
-	[32mnew file:   public/highlight/styles/agate.css[m
-	[32mnew file:   public/highlight/styles/androidstudio.css[m
-	[32mnew file:   public/highlight/styles/arduino-light.css[m
-	[32mnew file:   public/highlight/styles/arta.css[m
-	[32mnew file:   public/highlight/styles/ascetic.css[m
-	[32mnew file:   public/highlight/styles/atelier-cave-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-cave-light.css[m
-	[32mnew file:   public/highlight/styles/atelier-dune-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-dune-light.css[m
-	[32mnew file:   public/highlight/styles/atelier-estuary-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-estuary-light.css[m
-	[32mnew file:   public/highlight/styles/atelier-forest-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-forest-light.css[m
-	[32mnew file:   public/highlight/styles/atelier-heath-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-heath-light.css[m
-	[32mnew file:   public/highlight/styles/atelier-lakeside-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-lakeside-light.css[m
-	[32mnew file:   public/highlight/styles/atelier-plateau-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-plateau-light.css[m
-	[32mnew file:   public/highlight/styles/atelier-savanna-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-savanna-light.css[m
-	[32mnew file:   public/highlight/styles/atelier-seaside-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-seaside-light.css[m
-	[32mnew file:   public/highlight/styles/atelier-sulphurpool-dark.css[m
-	[32mnew file:   public/highlight/styles/atelier-sulphurpool-light.css[m
-	[32mnew file:   public/highlight/styles/atom-one-dark.css[m
-	[32mnew file:   public/highlight/styles/atom-one-light.css[m
-	[32mnew file:   public/highlight/styles/brown-paper.css[m
-	[32mnew file:   public/highlight/styles/brown-papersq.png[m
-	[32mnew file:   public/highlight/styles/codepen-embed.css[m
-	[32mnew file:   public/highlight/styles/color-brewer.css[m
-	[32mnew file:   public/highlight/styles/darcula.css[m
-	[32mnew file:   public/highlight/styles/dark.css[m
-	[32mnew file:   public/highlight/styles/darkula.css[m
-	[32mnew file:   public/highlight/styles/default.css[m
-	[32mnew file:   public/highlight/styles/docco.css[m
-	[32mnew file:   public/highlight/styles/dracula.css[m
-	[32mnew file:   public/highlight/styles/far.css[m
-	[32mnew file:   public/highlight/styles/foundation.css[m
-	[32mnew file:   public/highlight/styles/github-gist.css[m
-	[32mnew file:   public/highlight/styles/github.css[m
-	[32mnew file:   public/highlight/styles/googlecode.css[m
-	[32mnew file:   public/highlight/styles/grayscale.css[m
-	[32mnew file:   public/highlight/styles/gruvbox-dark.css[m
-	[32mnew file:   public/highlight/styles/gruvbox-light.css[m
-	[32mnew file:   public/highlight/styles/hopscotch.css[m
-	[32mnew file:   public/highlight/styles/hybrid.css[m
-	[32mnew file:   public/highlight/styles/idea.css[m
-	[32mnew file:   public/highlight/styles/ir-black.css[m
-	[32mnew file:   public/highlight/styles/kimbie.dark.css[m
-	[32mnew file:   public/highlight/styles/kimbie.light.css[m
-	[32mnew file:   public/highlight/styles/magula.css[m
-	[32mnew file:   public/highlight/styles/mono-blue.css[m
-	[32mnew file:   public/highlight/styles/monokai-sublime.css[m
-	[32mnew file:   public/highlight/styles/monokai.css[m
-	[32mnew file:   public/highlight/styles/obsidian.css[m
-	[32mnew file:   public/highlight/styles/ocean.css[m
-	[32mnew file:   public/highlight/styles/paraiso-dark.css[m
-	[32mnew file:   public/highlight/styles/paraiso-light.css[m
-	[32mnew file:   public/highlight/styles/pojoaque.css[m
-	[32mnew file:   public/highlight/styles/pojoaque.jpg[m
-	[32mnew file:   public/highlight/styles/purebasic.css[m
-	[32mnew file:   public/highlight/styles/qtcreator_dark.css[m
-	[32mnew file:   public/highlight/styles/qtcreator_light.css[m
-	[32mnew file:   public/highlight/styles/railscasts.css[m
-	[32mnew file:   public/highlight/styles/rainbow.css[m
-	[32mnew file:   public/highlight/styles/routeros.css[m
-	[32mnew file:   public/highlight/styles/school-book.css[m
-	[32mnew file:   public/highlight/styles/school-book.png[m
-	[32mnew file:   public/highlight/styles/solarized-dark.css[m
-	[32mnew file:   public/highlight/styles/solarized-light.css[m
-	[32mnew file:   public/highlight/styles/sunburst.css[m
-	[32mnew file:   public/highlight/styles/tomorrow-night-blue.css[m
-	[32mnew file:   public/highlight/styles/tomorrow-night-bright.css[m
-	[32mnew file:   public/highlight/styles/tomorrow-night-eighties.css[m
-	[32mnew file:   public/highlight/styles/tomorrow-night.css[m
-	[32mnew file:   public/highlight/styles/tomorrow.css[m
-	[32mnew file:   public/highlight/styles/vs.css[m
-	[32mnew file:   public/highlight/styles/vs2015.css[m
-	[32mnew file:   public/highlight/styles/xcode.css[m
-	[32mnew file:   public/highlight/styles/xt256.css[m
-	[32mnew file:   public/highlight/styles/zenburn.css[m
-	[32mnew file:   public/img/EthanYParsimony.jpg[m
-	[32mnew file:   public/img/archive.png[m
-	[32mnew file:   public/img/archive.svg[m
-	[32mnew file:   public/img/common/icon-twitter.png[m
-	[32mnew file:   public/img/common/logo.png[m
-	[32mnew file:   public/img/common/logx2.png[m
-	[32mnew file:   public/img/favicons/logo-384x384.png[m
-	[32mnew file:   public/img/icon-minimalism.png[m
-	[32mnew file:   public/img/icon-typo.png[m
-	[32mnew file:   public/img/kube/brand.png[m
-	[32mnew file:   public/img/kube/icon-baseline.png[m
-	[32mnew file:   public/img/kube/icon-minimalism.png[m
-	[32mnew file:   public/img/kube/icon-typo.png[m
-	[32mnew file:   public/img/kube/typography/01.png[m
-	[32mnew file:   public/img/kube/typography/02.png[m
-	[32mnew file:   public/index.html[m
-	[32mnew file:   public/index.json[m
-	[32mnew file:   public/index.xml[m
-	[32mnew file:   public/js/auto-complete.js[m
-	[32mnew file:   public/js/jquery-2.1.4.min.js[m
-	[32mnew file:   public/js/kube.js[m
-	[32mnew file:   public/js/kube.legenda.js[m
-	[32mnew file:   public/js/kube.min.js[m
-	[32mnew file:   public/js/lunr.min.js[m
-	[32mnew file:   public/js/master.js[m
-	[32mnew file:   public/js/search.js[m
-	[32mnew file:   public/js/tocbot.min.js[m
-	[32mnew file:   public/page/1/index.html[m
-	[32mnew file:   public/posts/2017-02-22-restructuring-dyadic-data.Rmd[m
-	[32mnew file:   public/posts/2017-10-05-dplyr.Rmd[m
-	[32mnew file:   public/posts/2018-12-23-sem-diagrams-for-lavaan-models.Rmd[m
-	[32mnew file:   public/posts/2018-12-23-sem-diagrams-for-lavaan-models_files/figure-html/unnamed-chunk-7-1.png[m
-	[32mnew file:   public/posts/dplyr/index.html[m
-	[32mnew file:   public/posts/index.html[m
-	[32mnew file:   public/posts/index.xml[m
-	[32mnew file:   public/posts/page/1/index.html[m
-	[32mnew file:   public/posts/restructuring-dyadic-data/index.html[m
-	[32mnew file:   public/posts/sem-diagrams-for-lavaan-models/index.html[m
-	[32mnew file:   public/projects/index.html[m
-	[32mnew file:   public/projects/index.xml[m
-	[32mnew file:   public/projects/page/1/index.html[m
-	[32mnew file:   public/research/cognition/index.html[m
-	[32mnew file:   public/research/cognition/index.xml[m
-	[32mnew file:   public/research/index.html[m
-	[32mnew file:   public/research/index.xml[m
-	[32mnew file:   public/research/metabolic-traits/index.html[m
-	[32mnew file:   public/research/metabolic-traits/index.xml[m
-	[32mnew file:   public/research/stress-physiology/index.html[m
-	[32mnew file:   public/research/stress-physiology/index.xml[m
-	[32mnew file:   public/resources/_index.Rmd[m
-	[32mnew file:   public/resources/index.html[m
-	[32mnew file:   public/resources/index.xml[m
-	[32mnew file:   public/sitemap.xml[m
-	[32mnew file:   public/tags/code/index.html[m
-	[32mnew file:   public/tags/code/index.xml[m
-	[32mnew file:   public/tags/dplyr/index.html[m
-	[32mnew file:   public/tags/dplyr/index.xml[m
-	[32mnew file:   public/tags/ggplot2/index.html[m
-	[32mnew file:   public/tags/ggplot2/index.xml[m
-	[32mnew file:   public/tags/index.html[m
-	[32mnew file:   public/tags/index.xml[m
-	[32mnew file:   public/tags/lavaan/index.html[m
-	[32mnew file:   public/tags/lavaan/index.xml[m
-	[32mnew file:   public/tags/r/index.html[m
-	[32mnew file:   public/tags/r/index.xml[m
-	[32mnew file:   public/tags/sem/index.html[m
-	[32mnew file:   public/tags/sem/index.xml[m
-	[32mnew file:   static/.gitkeep[m
-	[32mnew file:   static/css/auto-complete.css[m
-	[32mnew file:   static/css/custom.css[m
-	[32mnew file:   static/css/font.css[m
-	[32mnew file:   static/css/highlight.css[m
-	[32mnew file:   static/css/kube.css[m
-	[32mnew file:   static/css/kube.demo.css[m
 	[32mnew file:   static/css/kube.legenda.css[m
 	[32mnew file:   static/css/kube.min.css[m
 	[32mnew file:   static/css/master.css[m
@@ -1444,3 +970,110 @@ To https://github.com/ethan-young/website.git
    dcb5db4..b9e3c5d  master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git push -u origin mastercommit -m "fix netlify .toml again again again"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git add .push -u origin mastercommit -m "fix netlify .toml again again again" "a"g"a"i"n"!"
+bash: !": event not found
+PSY-IT-Mac-Pro:Kube youn0737$ git add .push -u origin mastercommit -m "fix netlify .toml again again again" "a"g"a"i"n"
+[master 2b99757] fix netlify .toml again again again again
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git commit -m "fix netlify .toml again again again again"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kpush -u origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 1.00 KiB | 1.00 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/3)   [Kremote: Resolving deltas:  33% (1/3)   [Kremote: Resolving deltas:  66% (2/3)   [Kremote: Resolving deltas: 100% (3/3)   [Kremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
+To https://github.com/ethan-young/website.git
+   b9e3c5d..2b99757  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ [KPSY-IT-Mac-Pro:Kube youn0737$ git push -u origin master[Kgot[K[Koit[K[K[Ko[Ko[Kit status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/INDEX001[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/7AB7662B[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/B1E2EC44[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/D1E6648A/console06/AA6DC71A[m
+	[31mmodified:   .Rproj.user/D1E6648A/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/D1E6648A/pcs/files-pane.pper[m
+	[31mmodified:   .Rproj.user/D1E6648A/pcs/source-pane.pper[m
+	[31mmodified:   .Rproj.user/D1E6648A/pcs/windowlayoutstate.pper[m
+	[31mmodified:   .Rproj.user/D1E6648A/pcs/workbench-pane.pper[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/15335379-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/1D8A53D8-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/1ECB82AF-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/21DD2E-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/233A26A1-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/25274E17-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/31569C91-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/4FA89B25-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/56AA269-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/57C04017-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/5F5D7979-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/7AB7662B[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/7AB7662B-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/8185D55D-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/8A5D410D-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/95ABD3C3-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/A1F7780-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/A9142EF6-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/B1E2EC44[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/B1E2EC44-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/B4D77510-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/B8EFF1E0-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/BCACCD05-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/C2FB4CCB-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/C556B743-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/C58ABC07-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/D6EF5C1E-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/F8124595-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/F8B67FE8-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/FCAC482A-contents[m
+	[31mdeleted:    .Rproj.user/D1E6648A/sources/s-C3F70A63/lock_file[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[31mmodified:   .gitignore[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git pushstatus/Users/youn0737/Downloads/ghostscript-9.26-linux-x86_64/gs-926-linux-x86_64 ; exit;[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -a public/.gitkeep[K[Kpublic/ ls -a[8P[C[C[C[C[C[8@public/ [C[C[C[C[C[1Pls -a public/.gitkeep/Users/youn0737/Downloads/ghostscript-9.26-linux-x86_64/gs-926-linux-x86_64 ; exit;[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit status[K[2Ppush origin mash[K[K[Kaster
+Everything up-to-date
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ [KPSY-IT-Mac-Pro:Kube youn0737$ git add netlify.toml 
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git commit -m "fix toml"[C toml"n toml"e toml"t toml"l toml"i toml"f toml"y toml". toml"[C[1Ptoml"[C[C[C[C[C
+[master b6d5ac9] fix netlify.toml
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git commit -m "fix netlify.toml"[11Padd netlify.toml push origin master
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  50% (1/2)   Writing objects: 100% (2/2)   Writing objects: 100% (2/2), 260 bytes | 260.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/ethan-young/website.git
+   2b99757..b6d5ac9  master -> master
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git push origin mastercommit -m "fix netlify.toml"[11Padd netlify.toml 
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git add netlify.toml push origin mastercommit -m "fix netlify.toml"
+[master 23bbac7] fix netlify.toml
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git commit -m "fix netlify.toml"[11Padd netlify.toml push origin master
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  50% (1/2)   Writing objects: 100% (2/2)   Writing objects: 100% (2/2), 260 bytes | 260.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/ethan-young/website.git
+   b6d5ac9..23bbac7  master -> master
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git add .
