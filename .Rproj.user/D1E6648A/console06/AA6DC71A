@@ -1396,3 +1396,23 @@ To https://github.com/ethan-young/website.git
    c80a3ca..a5032a6  master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git add .
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git[K[K[Kgit add .push -u origin mastercommit -m "fix netlify .toml" "a"g"a"i"n"
+[master b5bf70b] fix netlify .toml again
+ 9 files changed, 69 insertions(+), 4 deletions(-)
+ create mode 100644 .Rproj.user/D1E6648A/sources/prop/4C2BF3B3
+ create mode 100644 .Rproj.user/D1E6648A/sources/prop/DFB279DE
+ rename .Rproj.user/D1E6648A/sources/s-C3F70A63/{21DD2E => 7AB7662B} (78%)
+ create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/7AB7662B-contents
+ create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/8A5D410D-contents
+ create mode 100644 .Rproj.user/D1E6648A/sources/s-C3F70A63/C556B743-contents
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git commit -m "fix netlify .toml again"add .[Kpush -u origin master
+Counting objects: 16, done.
+Delta compression using up to 4 threads.
+Compressing objects:   6% (1/15)   Compressing objects:  13% (2/15)   Compressing objects:  20% (3/15)   Compressing objects:  26% (4/15)   Compressing objects:  33% (5/15)   Compressing objects:  40% (6/15)   Compressing objects:  46% (7/15)   Compressing objects:  53% (8/15)   Compressing objects:  60% (9/15)   Compressing objects:  66% (10/15)   Compressing objects:  73% (11/15)   Compressing objects:  80% (12/15)   Compressing objects:  86% (13/15)   Compressing objects:  93% (14/15)   Compressing objects: 100% (15/15)   Compressing objects: 100% (15/15), done.
+Writing objects:   6% (1/16)   Writing objects:  12% (2/16)   Writing objects:  18% (3/16)   Writing objects:  25% (4/16)   Writing objects:  31% (5/16)   Writing objects:  37% (6/16)   Writing objects:  43% (7/16)   Writing objects:  50% (8/16)   Writing objects:  56% (9/16)   Writing objects:  62% (10/16)   Writing objects:  68% (11/16)   Writing objects:  75% (12/16)   Writing objects:  81% (13/16)   Writing objects:  87% (14/16)   Writing objects:  93% (15/16)   Writing objects: 100% (16/16)   Writing objects: 100% (16/16), 2.47 KiB | 58.00 KiB/s, done.
+Total 16 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/8)   [Kremote: Resolving deltas:  12% (1/8)   [Kremote: Resolving deltas:  25% (2/8)   [Kremote: Resolving deltas:  37% (3/8)   [Kremote: Resolving deltas:  50% (4/8)   [Kremote: Resolving deltas:  62% (5/8)   [Kremote: Resolving deltas:  75% (6/8)   [Kremote: Resolving deltas:  87% (7/8)   [Kremote: Resolving deltas: 100% (8/8)   [Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
+To https://github.com/ethan-young/website.git
+   a5032a6..b5bf70b  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/Google Drive/Research/Websites/KubePSY-IT-Mac-Pro:Kube youn0737$ git push -u origin mastercommit -m "fix netlify .toml again"add .[Kpush -u origin masteradd .[K
