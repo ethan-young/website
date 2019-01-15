@@ -11,7 +11,7 @@ tags:
 - code
 ---
 
-```{r}
+```{r include=F}
 # knitr options
 knitr::opts_chunk$set(message = F, warning = F)
 ```
