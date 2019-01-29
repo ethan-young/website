@@ -1,6 +1,6 @@
 ---
-title: A Method for Estimating Environmental Statistics from Longitudinal Data
-description: "Using list columns to run individual regressions and extract model statistics."
+title: Estimating Environmental Statistics
+description: "This article explores a number of methods for extracting environmental statistics from longitudinal data."
 author: Ethan Young
 date: '2019-01-14'
 tocbot: true
@@ -403,4 +403,89 @@ lm_sigma
 </tbody>
 </table>
 <p>The main idea here is that we can use this method to extract interesting parameters not normally leveraged in mixed-models and use them in further analysis, such as looking at how residual variance, a potential measure of unpredictability, might be a unique predictor of different kinds of outcomes.</p>
+</div>
+<div id="time-series-analysis" class="section level3">
+<h3>Time Series Analysis</h3>
+<p>We can also use techniques from time series analysis to describe longitudinal data. For example, we can calculate autocorrelation and partial autocorrelations in a time series or fit autoregression and moving average models (or a combination of the two) to a time series. In addition, and of particular interest for calculating environmental statistics, it is also possible to calculate the extent to which noise in a time series is uncorrelated (white noise) or correlated (colored noise). For example:</p>
+<blockquote>
+<p>‘White’ noise has no temporal autocorrelation: the environmental states at any two points in time are independent of each other. When environmental states are positively correlated, noise is described as pink, brown or black, depending on the degree of autocorrelation. <br>-Frankenhuis, Nettle, &amp; Dall (in press)</p>
+</blockquote>
+</div>
+<div id="time-series-data" class="section level3">
+<h3>Time Series Data</h3>
+<div id="visualizing-time-series" class="section level4">
+<h4>Visualizing Time Series</h4>
+<pre class="r"><code>stress_df %&gt;% 
+  ggplot(aes(x = time, y = stress)) +
+  stat_smooth(method=&quot;lm&quot;,se=F, alpha = .5, color = &quot;gray&quot;)+
+  geom_line() +
+  geom_point() +
+  facet_wrap(~id, nrow = 5)</code></pre>
+<p><img src="/posts/2019-01-14-list-columns-unp_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="differenced-time-series" class="section level4">
+<h4>Differenced Time Series</h4>
+<pre class="r"><code>stress_df %&gt;% 
+  group_by(id) %&gt;% 
+  mutate(stress_diff = stress - lag(stress)) %&gt;% 
+  filter(id %in% c(1,2)) %&gt;% 
+  gather(key,value,-id,-time) %&gt;% 
+  mutate(key = factor(key,c(&quot;stress&quot;,&quot;stress_diff&quot;),c(&quot;Raw&quot;,&quot;Differenced&quot;))) %&gt;% 
+  ggplot(aes(x = time, y = value)) +
+  geom_line() +
+  geom_point() +
+  stat_smooth(method=&quot;lm&quot;,se=F) +
+  facet_grid(id~key)</code></pre>
+<p><img src="/posts/2019-01-14-list-columns-unp_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+</div>
+<div id="autocorrelation" class="section level3">
+<h3>Autocorrelation</h3>
+<pre class="r"><code># Define custom autocorrelation functions
+stress_acf &lt;- function(df,index){
+  df %&gt;% pull(index) %&gt;%  acf(plot=F)
+}
+
+stress_pacf &lt;- function(df,index){
+  df %&gt;% pull(index) %&gt;%  pacf(plot=F)
+}
+
+# Run Auto and Partial autocorrelation functions on each participant&#39;s time series
+stress_df_tseries &lt;- stress_df %&gt;% 
+  group_by(id) %&gt;% 
+  nest() %&gt;% 
+  mutate(
+    acf       = map(data,stress_acf,2),
+    pacf      = map(data,stress_pacf,2),
+    acf_data  = map(acf,function(x) data.frame(lag = x$lag, r = x$acf)),
+    pacf_data = map(pacf,function(x) data.frame(lag = x$lag, r = x$acf))
+  )</code></pre>
+<div id="visualize-autocorrelations" class="section level4">
+<h4>Visualize Autocorrelations</h4>
+<pre class="r"><code>stress_df_tseries %&gt;% 
+  select(id,acf_data) %&gt;% 
+  unnest() %&gt;% 
+  ggplot(aes(x = lag, y = r)) +
+  geom_hline(aes(yintercept = 0)) +
+  geom_hline(aes(yintercept = qnorm((1 + .95)/2)/sqrt(10)),linetype = &quot;dashed&quot;, color = &quot;blue&quot;) +
+  geom_hline(aes(yintercept = qnorm((1 + .95)/2)/sqrt(10)*-1),linetype = &quot;dashed&quot;, color = &quot;blue&quot;) +
+  geom_segment(aes(x = lag, xend = lag, y = 0, yend = r)) +
+  scale_x_continuous(&quot;Lag&quot;,breaks = 0:9) +
+  facet_wrap(~id,nrow = 5,scales = &quot;free&quot;)</code></pre>
+<p><img src="/posts/2019-01-14-list-columns-unp_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="visualize-partial-autocorrelations" class="section level4">
+<h4>Visualize Partial Autocorrelations</h4>
+<pre class="r"><code>stress_df_tseries %&gt;% 
+  select(id,pacf_data) %&gt;% 
+  unnest() %&gt;% 
+  ggplot(aes(x = lag, y = r)) +
+  geom_hline(aes(yintercept = 0)) +
+  geom_hline(aes(yintercept = qnorm((1 + .95)/2)/sqrt(10)),linetype = &quot;dashed&quot;, color = &quot;blue&quot;) +
+  geom_hline(aes(yintercept = qnorm((1 + .95)/2)/sqrt(10)*-1),linetype = &quot;dashed&quot;, color = &quot;blue&quot;) +
+  geom_segment(aes(x = lag, xend = lag, y = 0, yend = r)) +
+  scale_x_continuous(&quot;Lag&quot;,breaks = 0:9) +
+  facet_wrap(~id,nrow = 5,scales = &quot;free&quot;)</code></pre>
+<p><img src="/posts/2019-01-14-list-columns-unp_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
 </div>

@@ -1,6 +1,6 @@
 ---
-title: A Method for Estimating Environmental Statistics from Longitudinal Data
-description: "Using list columns to run individual regressions and extract model statistics."
+title: Estimating Environmental Statistics
+description: "This article explores a number of methods for extracting environmental statistics from longitudinal data."
 author: Ethan Young
 date: '2019-01-14'
 tocbot: true
@@ -191,3 +191,92 @@ stress_models %>%
 ```
 
 The main idea here is that we can use this method to extract interesting parameters not normally leveraged in mixed-models and use them in further analysis, such as looking at how residual variance, a potential measure of unpredictability, might be a unique predictor of different kinds of outcomes.
+
+### Time Series Analysis
+
+We can also use techniques from time series analysis to describe longitudinal data. For example, we can calculate autocorrelation and partial autocorrelations in a time series or fit autoregression and moving average models (or a combination of the two) to a time series. In addition, and of particular interest for calculating environmental statistics, it is also possible to calculate the extent to which noise in a time series is uncorrelated (white noise) or correlated (colored noise). For example:
+
+> ‘White’ noise has no temporal autocorrelation: the environmental states at any two points in time are independent of each other. When environmental states are positively correlated, noise is described as pink, brown or black, depending on the degree of autocorrelation. <br>-Frankenhuis, Nettle, & Dall (in press)
+
+### Time Series Data
+
+#### Visualizing Time Series
+
+```{r,fig.height=10}
+stress_df %>% 
+  ggplot(aes(x = time, y = stress)) +
+  stat_smooth(method="lm",se=F, alpha = .5, color = "gray")+
+  geom_line() +
+  geom_point() +
+  facet_wrap(~id, nrow = 5)
+```
+
+#### Differenced Time Series
+
+```{r}
+stress_df %>% 
+  group_by(id) %>% 
+  mutate(stress_diff = stress - lag(stress)) %>% 
+  filter(id %in% c(1,2)) %>% 
+  gather(key,value,-id,-time) %>% 
+  mutate(key = factor(key,c("stress","stress_diff"),c("Raw","Differenced"))) %>% 
+  ggplot(aes(x = time, y = value)) +
+  geom_line() +
+  geom_point() +
+  stat_smooth(method="lm",se=F) +
+  facet_grid(id~key)
+```
+
+### Autocorrelation
+
+```{r}
+# Define custom autocorrelation functions
+stress_acf <- function(df,index){
+  df %>% pull(index) %>%  acf(plot=F)
+}
+
+stress_pacf <- function(df,index){
+  df %>% pull(index) %>%  pacf(plot=F)
+}
+
+# Run Auto and Partial autocorrelation functions on each participant's time series
+stress_df_tseries <- stress_df %>% 
+  group_by(id) %>% 
+  nest() %>% 
+  mutate(
+    acf       = map(data,stress_acf,2),
+    pacf      = map(data,stress_pacf,2),
+    acf_data  = map(acf,function(x) data.frame(lag = x$lag, r = x$acf)),
+    pacf_data = map(pacf,function(x) data.frame(lag = x$lag, r = x$acf))
+  )
+```
+
+#### Visualize Autocorrelations
+
+```{r, fig.height=10}
+stress_df_tseries %>% 
+  select(id,acf_data) %>% 
+  unnest() %>% 
+  ggplot(aes(x = lag, y = r)) +
+  geom_hline(aes(yintercept = 0)) +
+  geom_hline(aes(yintercept = qnorm((1 + .95)/2)/sqrt(10)),linetype = "dashed", color = "blue") +
+  geom_hline(aes(yintercept = qnorm((1 + .95)/2)/sqrt(10)*-1),linetype = "dashed", color = "blue") +
+  geom_segment(aes(x = lag, xend = lag, y = 0, yend = r)) +
+  scale_x_continuous("Lag",breaks = 0:9) +
+  facet_wrap(~id,nrow = 5,scales = "free")
+```
+
+#### Visualize Partial Autocorrelations
+
+```{r, fig.height=10}
+stress_df_tseries %>% 
+  select(id,pacf_data) %>% 
+  unnest() %>% 
+  ggplot(aes(x = lag, y = r)) +
+  geom_hline(aes(yintercept = 0)) +
+  geom_hline(aes(yintercept = qnorm((1 + .95)/2)/sqrt(10)),linetype = "dashed", color = "blue") +
+  geom_hline(aes(yintercept = qnorm((1 + .95)/2)/sqrt(10)*-1),linetype = "dashed", color = "blue") +
+  geom_segment(aes(x = lag, xend = lag, y = 0, yend = r)) +
+  scale_x_continuous("Lag",breaks = 0:9) +
+  facet_wrap(~id,nrow = 5,scales = "free")
+```
