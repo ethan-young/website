@@ -13,11 +13,11 @@ library(googlesheets)
 
 # Publications
 journals <- c("Journal of Personality and Social Psychology",
-              "Self & Identity",
+              "Self and Identity",
               "Psychological Science",
               "Evolutionary Behavioral Sciences",
               "Developmental Psychology",
-              "Attachment & Human Development")
+              "Attachment and Human Development")
 
 # Get pubs gsheet
 gs_auth()
