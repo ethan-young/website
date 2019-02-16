@@ -22,34 +22,29 @@ journals <- c("Journal of Personality and Social Psychology",
 # Get pubs gsheet
 gs_auth()
 pubs <- gs_read(gs_title("pubs")) %>% 
-  mutate(
-    citation = str_replace(citation,"Young, E. S.","<b>Young, E. S.</b>"),
-    citation = case_when(str_detect(citation, journals[1]) ~ str_replace(citation,journals[1],paste0("<em>",journals[1],"</em>")),
-                         str_detect(citation, journals[2]) ~ str_replace(citation,journals[2],paste0("<em>",journals[2],"</em>")),
-                         str_detect(citation, journals[3]) ~ str_replace(citation,journals[3],paste0("<em>",journals[3],"</em>")),
-                         str_detect(citation, journals[4]) ~ str_replace(citation,journals[4],paste0("<em>",journals[4],"</em>")),
-                         str_detect(citation, journals[5]) ~ str_replace(citation,journals[5],paste0("<em>",journals[5],"</em>")),
-                         str_detect(citation, journals[6]) ~ str_replace(citation,journals[6],paste0("<em>",journals[6],"</em>")),
-                         TRUE~citation)
-  )
+  mutate(citation = str_replace(citation,"Young, E. S.","<b>Young, E. S.</b>"))
+
+walk(journals, function(x){
+  pubs <<- pubs %>% 
+    mutate(citation = ifelse(str_detect(citation,x), str_replace(citation,x,paste0("<em>",x,"</em>")),citation))
+})
 
 # Journal articles
 articles <- pubs %>% 
   filter(pub_type=="journal") %>% 
   arrange(desc(year)) %>% 
-  mutate(count      = 1:n()) %>% 
-  arrange(desc(year)) %>% 
+  mutate(count = 1:n()) %>% 
   group_by(year) %>%
   mutate(count_year = 1:n(),
          count_auth = ifelse(str_detect(citation,"^<b>Young, E. S."), count*-1, count_year),
-         border     = ifelse(count_year == max(count_auth),"solid","none"),
+         border     = ifelse(count_year == max(count_auth) | n()==1,"solid","none"),
          year_group = ifelse(count_auth == min(count_auth),year,"") %>% str_replace("-"," ")) %>% 
   arrange(desc(year),count_auth) %>% 
   ungroup() %>% 
   mutate(
     border   = ifelse(count == last(count),"",border),
     download = ifelse(is.na(download),"", 
-                      paste0("<a class = 'label success', role = 'button', href =", download, " download =", download, ">Download</a>")),
+                      paste0("<a class = 'label success' role = 'button' target = '_blank' href =", download, ">Download</a>")),
     abstract = ifelse(is.na(abstract),"", 
                       paste0("<a class = 'label focus collapse-toggle'",
                              "href = '#abstract-",year,"-",count,"' ",
@@ -68,19 +63,16 @@ chapters <- pubs %>%
   arrange(desc(year)) %>% 
   mutate(count = 1:n()) %>% 
   group_by(year) %>%
-  mutate(count      = 1:n()) %>% 
-  arrange(desc(year)) %>% 
-  group_by(year) %>%
   mutate(count_year = 1:n(),
          count_auth = ifelse(str_detect(citation,"^<b>Young, E. S."), count*-1, count_year),
-         border     = ifelse(count_year == max(count_auth),"solid","none"),
+         border     = ifelse(count_year == max(count_auth) | n()==1,"solid","none"),
          year_group = ifelse(count_auth == min(count_auth),year,"") %>% str_replace("-"," ")) %>% 
   arrange(desc(year),count_auth) %>% 
   ungroup() %>% 
   mutate(
     border   = ifelse(count == last(count),"",border),
     download = ifelse(is.na(download),"", 
-                      paste0("<a class = 'label success', role = 'button', href =", download, " download =", download, ">Download</a>")),
+                      paste0("<a class = 'label success' role = 'button' target = '_blank' href =", download, ">Download</a>")),
     abstract = ifelse(is.na(abstract),"", 
                       paste0("<a class = 'label focus collapse-toggle'",
                              "href = '#abstract-",year,"-",count,"' ",
@@ -91,7 +83,63 @@ chapters <- pubs %>%
                              "style = 'margin: 0; padding: 25px;'>",
                              "<p class = 'small'><em>", abstract, "</em></p></div>",
                              "</div>"))
-  ) 
+  )
+
+# Talks
+talks <- pubs %>% 
+  filter(pub_type=="presentation") %>% 
+  arrange(desc(year)) %>% 
+  mutate(count = 1:n()) %>% 
+  group_by(year) %>%
+  mutate(count_year = 1:n(),
+         count_auth = ifelse(str_detect(citation,"^<b>Young, E. S."), count*-1, count_year),
+         border     = ifelse(count_year == max(count_auth) | n()==1,"solid","none"),
+         year_group = ifelse(count_auth == min(count_auth),year,"") %>% str_replace("-"," ")) %>% 
+  arrange(desc(year),count_auth) %>% 
+  ungroup() %>% 
+  mutate(
+    border   = ifelse(count == last(count),"",border),
+    download = ifelse(is.na(download),"", 
+                      paste0("<a class = 'label success' role = 'button' target = '_blank' href =", download, ">Download</a>")),
+    abstract = ifelse(is.na(abstract),"", 
+                      paste0("<a class = 'label focus collapse-toggle'",
+                             "href = '#abstract-",year,"-",count,"' ",
+                             "role = 'button'>Abstract<span class = 'caret down'></span></a> ",
+                             ifelse(is.na(download)," ",download),
+                             "<div id = 'abstract","-",year,"-",count,"' ",
+                             "class = 'collapse-box hide bg-aluminum', ",
+                             "style = 'margin: 0; padding: 25px;'>",
+                             "<p class = 'small'><em>", abstract, "</em></p></div>",
+                             "</div>"))
+  )
+
+# Posters
+posters <- pubs %>% 
+  filter(pub_type=="poster") %>% 
+  arrange(desc(year)) %>% 
+  mutate(count = 1:n()) %>% 
+  group_by(year) %>%
+  mutate(count_year = 1:n(),
+         #count_auth = ifelse(str_detect(citation,"^<b>Young, E. S."), count*-1, count_year),
+         border     = ifelse(count_year == max(count_year) | n()==1,"solid","none"),
+         year_group = ifelse(count_year == min(count_year),year,"") %>% str_replace("-"," ")) %>% 
+  arrange(desc(year)) %>% 
+  ungroup() %>% 
+  mutate(
+    border   = ifelse(count == last(count),"",border),
+    download = ifelse(is.na(download),"", 
+                      paste0("<a class = 'label success' role = 'button' target = '_blank' href =", download, ">Download</a>")),
+    abstract = ifelse(is.na(abstract),"", 
+                      paste0("<a class = 'label focus collapse-toggle'",
+                             "href = '#abstract-",year,"-",count,"' ",
+                             "role = 'button'>Abstract<span class = 'caret down'></span></a> ",
+                             ifelse(is.na(download)," ",download),
+                             "<div id = 'abstract","-",year,"-",count,"' ",
+                             "class = 'collapse-box hide bg-aluminum', ",
+                             "style = 'margin: 0; padding: 25px;'>",
+                             "<p class = 'small'><em>", abstract, "</em></p></div>",
+                             "</div>"))
+  )
 ```
 
 ### Employment
@@ -101,7 +149,7 @@ tags$fieldset(
   tags$legend(style = "font-size: 16px;","Academic Positions"),
   tags$table(style = "margin: 0;",
     tags$tr(
-      tags$td(class = "w10", tags$b(tags$em("2013-present")),style = "border-bottom-style: none"),
+      tags$td(class = "w15", tags$b(tags$em("2013-present")),style = "border-bottom-style: none"),
       tags$td(style = "border-bottom-style: none",
               tags$p(style = "margin: 0;","PhD Student"),
               tags$p(style = "margin: 0;","University of Minnesota")
@@ -118,7 +166,7 @@ tags$fieldset(
   tags$legend(style = "font-size: 16px;","Graduate"),
   tags$table(style = "margin: 0;",
     tags$tr(
-      tags$td(class = "w10",tags$b(tags$em("2019 (expected)"))),
+      tags$td(class = "w15",tags$b(tags$em("2019 (expected)"))),
       tags$td(
         tags$p(style = "margin: 0;","Doctor of Philosophy"),
         tags$p(style = "margin: 0;","University of Minnesota"),
@@ -126,7 +174,7 @@ tags$fieldset(
       )
     ),
     tags$tr(
-      tags$td(class = "w10",tags$b(tags$em("2017")), style = "border-bottom-style: none"),
+      tags$td(class = "w15",tags$b(tags$em("2017")), style = "border-bottom-style: none"),
       tags$td(style = "border-bottom-style: none",
               tags$p(style = "margin: 0;","Master's of Arts"),
               tags$p(style = "margin: 0;","University of Minnesota"),
@@ -140,11 +188,35 @@ tags$fieldset(
   tags$legend(style = "font-size: 16px;","Undergraduate"),
   tags$table(style = "margin: 0;",
     tags$tr(
-      tags$td(class = "w10", tags$b(tags$em("2012")),style = "border-bottom-style: none"),
+      tags$td(class = "w15", tags$b(tags$em("2012")),style = "border-bottom-style: none"),
       tags$td(style = "border-bottom-style: none",
               tags$p(style = "margin: 0;","Bachelor of Science"),
               tags$p(style = "margin: 0;","University of Minnesota"),
               tags$p(style = "margin: 0;","Majors: Psychology & Spanish Studies")
+      )
+    )
+  )
+)
+```
+
+### Honors & Awards
+
+```{r fellowships,echo=F,message=F,warning=F}
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Fellowships"),
+  tags$table(style = "margin: 0;",
+    tags$tr(
+      tags$td(class = "w15",tags$b(tags$em("2018-2019"))),
+      tags$td(
+        tags$p(style = "margin: 0;","Doctoral Dissertaion Fellowship"),
+        tags$p(style = "margin: 0;","University of Minnesota")
+      )
+    ),
+    tags$tr(
+      tags$td(class = "w15",tags$b(tags$em("2017-2018")), style = "border-bottom-style: none"),
+      tags$td(style = "border-bottom-style: none",
+              tags$p(style = "margin: 0;","Thomas J. Bouchard Fellowship"),
+              tags$p(style = "margin: 0;","Department of Psychology, University of Minnesota")
       )
     )
   )
@@ -161,11 +233,10 @@ tags$fieldset(
                tags$table(
                  HTML(
                    articles %>% 
-                     filter(pub_type=="journal") %>% 
                      str_glue_data(
                        "<tr >",
                        "<tr >",
-                       "<td style = '",
+                       "<td class = 'w15' style = '",
                        "border-style: none none {border} none;",
                        "border-width: 1px 1px 1px 1px;",
                        "border-color: rgba(0,0,0,.05);'>",
@@ -199,10 +270,84 @@ tags$fieldset(
                tags$table(
                  HTML(
                    chapters %>% 
-                     filter(pub_type=="chapter") %>% 
                      str_glue_data(
                        "<tr >",
+                       "<td class = 'w15' style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<b>{year_group}</b>",
+                       "</td>",
                        "<td style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<ul><li>{citation}</li>",
+                       "<div data-component = 'collapse'>",
+                       "{download}",
+                       "</div>",
+                       "</ul>",
+                       "</td>",
+                       "</tr>"
+                     ) %>% 
+                     paste(collapse = "")
+                 )
+               )
+             )
+  )
+)
+```
+
+### Presentations
+
+```{r talks,echo=F,message=F,warning=F}
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Talks"),
+  tags$table(style = "margin: 0;",
+             tags$tbody(
+               tags$table(
+                 HTML(
+                   talks %>% 
+                     str_glue_data(
+                       "<tr >",
+                       "<td class = 'w15' style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<b>{year_group}</b>",
+                       "</td>",
+                       "<td style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<ul><li>{citation}</li>",
+                       "<div data-component = 'collapse'>",
+                       "{download}",
+                       "</div>",
+                       "</ul>",
+                       "</td>",
+                       "</tr>"
+                     ) %>% 
+                     paste(collapse = "")
+                 )
+               )
+             )
+  )
+)
+```
+
+```{r posters,echo=F,message=F,warning=F}
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Posters"),
+  tags$table(style = "margin: 0;",
+             tags$tbody(
+               tags$table(
+                 HTML(
+                   posters %>% 
+                     str_glue_data(
+                       "<tr >",
+                       "<tr >",
+                       "<td class = 'w15' style = '",
                        "border-style: none none {border} none;",
                        "border-width: 1px 1px 1px 1px;",
                        "border-color: rgba(0,0,0,.05);'>",
