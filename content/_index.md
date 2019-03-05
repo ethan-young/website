@@ -1,6 +1,6 @@
 +++
 title = "Ethan S. Young"
-description = "Ph.D. student, University of Minnesota"
+description = "Ph.D. Student, University of Minnesota"
 draft = false
 +++ 
 
