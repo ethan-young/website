@@ -251,7 +251,7 @@ tags$fieldset(
         mutate(last_row = ifelse(row_number()== max(row_number()), "none","solid")) %>% 
         glue_data(
           "<tr>",
-          "<td style = '",
+          "<td class = 'w15' style = '",
           "border-style: none none {last_row} none;",
           "border-width: 1px 1px 1px 1px;",
           "border-color: rgba(0,0,0,.05);'>",
