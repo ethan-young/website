@@ -1,5 +1,5 @@
 ---
-title: "Ethan S. Young, MA"
+title: "Ethan S. Young, Ph.D."
 description: "Curriculum Vitae"
 author: Ethan Young
 tocbot: true
@@ -10,6 +10,7 @@ tocbot: true
 library(tidyverse)
 library(htmltools)
 library(googlesheets)
+library(glue)
 
 # Publications
 journals <- c("Journal of Personality and Social Psychology",
@@ -17,12 +18,17 @@ journals <- c("Journal of Personality and Social Psychology",
               "Psychological Science",
               "Evolutionary Behavioral Sciences",
               "Developmental Psychology",
-              "Attachment and Human Development")
+              "Attachment and Human Development",
+              "Trends in Cognitive Sciences")
 
 # Get pubs gsheet
 gs_auth()
-pubs <- gs_read(gs_title("pubs")) %>% 
+pubs <- gs_read(gs_title("cv-data"),ws = 1) %>% 
   mutate(citation = str_replace(citation,"Young, E. S.","<b>Young, E. S.</b>"))
+positions <- gs_read(gs_title("cv-data"), ws = 2)
+education <- gs_read(gs_title("cv-data"), ws = 3)
+awards <- gs_read(gs_title("cv-data"), ws = 4)
+teaching <- gs_read(gs_title("cv-data"), ws = 5)
 
 walk(journals, function(x){
   pubs <<- pubs %>% 
@@ -68,6 +74,33 @@ chapters <- pubs %>%
          border     = ifelse(count_year == max(count_auth) | n()==1,"solid","none"),
          year_group = ifelse(count_auth == min(count_auth),year,"") %>% str_replace("-"," ")) %>% 
   arrange(desc(year),count_auth) %>% 
+  ungroup() %>% 
+  mutate(
+    border   = ifelse(count == last(count),"",border),
+    download = ifelse(is.na(download),"", 
+                      paste0("<a class = 'label success' role = 'button' target = '_blank' href =", download, ">Download</a>")),
+    abstract = ifelse(is.na(abstract),"", 
+                      paste0("<a class = 'label focus collapse-toggle'",
+                             "href = '#abstract-",year,"-",count,"' ",
+                             "role = 'button'>Abstract<span class = 'caret down'></span></a> ",
+                             ifelse(is.na(download)," ",download),
+                             "<div id = 'abstract","-",year,"-",count,"' ",
+                             "class = 'collapse-box hide bg-aluminum', ",
+                             "style = 'margin: 0; padding: 25px;'>",
+                             "<p class = 'small'><em>", abstract, "</em></p></div>",
+                             "</div>"))
+  )
+
+# In Progress
+in_progress <- pubs %>% 
+  filter(pub_type %in% c("invited","under review")) %>% 
+  mutate(count = 1:n()) %>% 
+  group_by(pub_type) %>%
+  mutate(count_year = 1:n(),
+         count_auth = ifelse(str_detect(citation,"^<b>Young, E. S."), count*-1, count_year),
+         border     = ifelse(count_year == max(count_auth) | n()==1,"solid","none"),
+         year_group = ifelse(count_auth == min(count_auth),pub_type,"") %>% str_replace("-"," ")) %>% 
+  arrange(pub_type,count_auth) %>%
   ungroup() %>% 
   mutate(
     border   = ifelse(count == last(count),"",border),
@@ -147,13 +180,28 @@ posters <- pubs %>%
 ```{r academic_positions,echo=F,message=F,warning=F}
 tags$fieldset(
   tags$legend(style = "font-size: 16px;","Academic Positions"),
-  tags$table(style = "margin: 0;",
-    tags$tr(
-      tags$td(class = "w15", tags$b(tags$em("2013-present")),style = "border-bottom-style: none"),
-      tags$td(style = "border-bottom-style: none",
-              tags$p(style = "margin: 0;","PhD Student"),
-              tags$p(style = "margin: 0;","University of Minnesota")
-      )
+  tags$table(
+    style = "margin: 0;",
+    HTML(
+      positions %>% 
+        mutate(last_row = ifelse(row_number()== max(row_number()), "none","solid")) %>% 
+        glue_data(
+          "<tr>",
+          "<td class = 'w15' style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "<b>{start}-{end}</b>",
+          "</td>",
+          "<td style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "{position}<br>{institution}<br>{people}",
+          "</td>",
+          "</tr>"
+        ) %>% 
+        paste(collapse = "")
     )
   )
 )
@@ -164,36 +212,60 @@ tags$fieldset(
 ```{r edu,echo=F,message=F,warning=F}
 tags$fieldset(
   tags$legend(style = "font-size: 16px;","Graduate"),
-  tags$table(style = "margin: 0;",
-    tags$tr(
-      tags$td(class = "w15",tags$b(tags$em("2019 (expected)"))),
-      tags$td(
-        tags$p(style = "margin: 0;","Doctor of Philosophy"),
-        tags$p(style = "margin: 0;","University of Minnesota"),
-        tags$p(style = "margin: 0;","Major: Psychology")
-      )
-    ),
-    tags$tr(
-      tags$td(class = "w15",tags$b(tags$em("2017")), style = "border-bottom-style: none"),
-      tags$td(style = "border-bottom-style: none",
-              tags$p(style = "margin: 0;","Master's of Arts"),
-              tags$p(style = "margin: 0;","University of Minnesota"),
-              tags$p(style = "margin: 0;","Major: Psychology")
-      )
+  tags$table(
+    style = "margin: 0;",
+    HTML(
+      education %>% 
+        filter(type == "graduate") %>% 
+        arrange(desc(end)) %>% 
+        mutate(last_row = ifelse(row_number()== max(row_number()), "none","solid")) %>% 
+        glue_data(
+          "<tr>",
+          "<td class = 'w15' style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "<b>{start}-{end}</b>",
+          "</td>",
+          "<td style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "{degree}<br>{institution}<br>{subject}",
+          "</td>",
+          "</tr>"
+        ) %>% 
+        paste(collapse = "")
     )
   )
 )
 
 tags$fieldset(
   tags$legend(style = "font-size: 16px;","Undergraduate"),
-  tags$table(style = "margin: 0;",
-    tags$tr(
-      tags$td(class = "w15", tags$b(tags$em("2012")),style = "border-bottom-style: none"),
-      tags$td(style = "border-bottom-style: none",
-              tags$p(style = "margin: 0;","Bachelor of Science"),
-              tags$p(style = "margin: 0;","University of Minnesota"),
-              tags$p(style = "margin: 0;","Majors: Psychology & Spanish Studies")
-      )
+  tags$table(
+    style = "margin: 0;",
+    HTML(
+      education %>% 
+        filter(type == "undergraduate") %>% 
+        arrange(desc(end)) %>% 
+        mutate(last_row = ifelse(row_number()== max(row_number()), "none","solid")) %>% 
+        glue_data(
+          "<tr>",
+          "<td style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "<b>{start}-{end}</b>",
+          "</td>",
+          "<td style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "{degree}<br>{institution}<br>{subject}",
+          "</td>",
+          "</tr>"
+        ) %>% 
+        paste(collapse = "")
     )
   )
 )
@@ -204,20 +276,29 @@ tags$fieldset(
 ```{r fellowships,echo=F,message=F,warning=F}
 tags$fieldset(
   tags$legend(style = "font-size: 16px;","Fellowships"),
-  tags$table(style = "margin: 0;",
-    tags$tr(
-      tags$td(class = "w15",tags$b(tags$em("2018-2019"))),
-      tags$td(
-        tags$p(style = "margin: 0;","Doctoral Dissertaion Fellowship"),
-        tags$p(style = "margin: 0;","University of Minnesota")
-      )
-    ),
-    tags$tr(
-      tags$td(class = "w15",tags$b(tags$em("2017-2018")), style = "border-bottom-style: none"),
-      tags$td(style = "border-bottom-style: none",
-              tags$p(style = "margin: 0;","Thomas J. Bouchard Fellowship"),
-              tags$p(style = "margin: 0;","Department of Psychology, University of Minnesota")
-      )
+  tags$table(
+    style = "margin: 0;",
+    HTML(
+      awards %>% 
+        arrange(desc(end)) %>% 
+        mutate(last_row = ifelse(row_number()== max(row_number()), "none","solid")) %>% 
+        glue_data(
+          "<tr>",
+          "<td class = 'w15' style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "<b>{start}-{end}</b>",
+          "</td>",
+          "<td style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "{award}<br>{institution}",
+          "</td>",
+          "</tr>"
+        ) %>% 
+        paste(collapse = "")
     )
   )
 )
@@ -234,7 +315,6 @@ tags$fieldset(
                  HTML(
                    articles %>% 
                      str_glue_data(
-                       "<tr >",
                        "<tr >",
                        "<td class = 'w15' style = '",
                        "border-style: none none {border} none;",
@@ -270,6 +350,42 @@ tags$fieldset(
                tags$table(
                  HTML(
                    chapters %>% 
+                     str_glue_data(
+                       "<tr >",
+                       "<td class = 'w15' style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<b>{year_group}</b>",
+                       "</td>",
+                       "<td style = '",
+                       "border-style: none none {border} none;",
+                       "border-width: 1px 1px 1px 1px;",
+                       "border-color: rgba(0,0,0,.05);'>",
+                       "<ul><li>{citation}</li>",
+                       "<div data-component = 'collapse'>",
+                       "{download}",
+                       "</div>",
+                       "</ul>",
+                       "</td>",
+                       "</tr>"
+                     ) %>% 
+                     paste(collapse = "")
+                 )
+               )
+             )
+  )
+)
+```
+
+```{r working,echo=F,message=F,warning=F}
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","In Progress"),
+  tags$table(style = "margin: 0;",
+             tags$tbody(
+               tags$table(
+                 HTML(
+                   in_progress %>% 
                      str_glue_data(
                        "<tr >",
                        "<td class = 'w15' style = '",
@@ -372,3 +488,95 @@ tags$fieldset(
   )
 )
 ```
+
+### Teaching
+
+```{r teaching, echo=F, message=F, warning=F}
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Instructor"),
+  tags$table(
+    style = "margin: 0;",
+    HTML(
+      teaching %>% 
+        filter(position == "Instructor") %>% 
+        mutate(last_row = ifelse(row_number()== max(row_number()), "none","solid")) %>% 
+        glue_data(
+          "<tr>",
+          "<td class = 'w15' style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "<b>{semester} {year}</b>",
+          "</td>",
+          "<td style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "{title} ({course})<br>{institution}",
+          "</td>",
+          "</tr>"
+        ) %>% 
+        paste(collapse = "")
+    )
+  )
+)
+
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Section Leader"),
+  tags$table(
+    style = "margin: 0;",
+    HTML(
+      teaching %>% 
+        filter(position == "Section Leader") %>% 
+        mutate(last_row = ifelse(row_number()== max(row_number()), "none","solid")) %>% 
+        glue_data(
+          "<tr>",
+          "<td class = 'w15' style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "<b>{semester} {year}</b>",
+          "</td>",
+          "<td style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "{title} ({course})<br>{institution}",
+          "</td>",
+          "</tr>"
+        ) %>% 
+        paste(collapse = "")
+    )
+  )
+)
+
+tags$fieldset(
+  tags$legend(style = "font-size: 16px;","Teaching Assistant"),
+  tags$table(
+    style = "margin: 0;",
+    HTML(
+      teaching %>% 
+        filter(position == "Teaching Assistant") %>% 
+        mutate(last_row = ifelse(row_number()== max(row_number()), "none","solid")) %>% 
+        glue_data(
+          "<tr>",
+          "<td class = 'w15' style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "<b>{semester} {year}</b>",
+          "</td>",
+          "<td style = '",
+          "border-style: none none {last_row} none;",
+          "border-width: 1px 1px 1px 1px;",
+          "border-color: rgba(0,0,0,.05);'>",
+          "{title} ({course})<br>{institution}",
+          "</td>",
+          "</tr>"
+        ) %>% 
+        paste(collapse = "")
+    )
+  )
+)
+```
+

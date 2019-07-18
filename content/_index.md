@@ -1,6 +1,6 @@
 +++
-title = "Ethan S. Young"
-description = "Ph.D. Student, University of Minnesota"
+title = "Ethan S. Young, Ph.D."
+description = "Postdoctoral Researcher at Radboud University - Nijmegen, Netherlands "
 draft = false
 +++ 
 
@@ -16,7 +16,7 @@ draft = false
 
 <br>
 
-I am currently a Ph.D. student at the University of Minnesota in the department of psychology. My main research interest is developmental plasticity, or the capacity for the individual to detect and adapt the phenotype to various ecological conditions across development. More specifically, my work explores if and how various cognitive functions, such as executive functions, working memory, learning, and attention, might be shaped and potentially enhanced by growing up in harsh and unpredictable environments.
+I am currently a postdoctoral researcher in the Behavioral Science Institute at Radboud University in The Netherlends. My main research interest is developmental plasticity, or the capacity for the individual to detect and adapt the phenotype to various ecological conditions across development. More specifically, my work explores if and how various cognitive functions, such as executive functions, working memory, learning, and attention, might be shaped and potentially enhanced by growing up in harsh and unpredictable environments.
 
 Another focus of mine is reproducibility and open science practices. I use <a href="https://cran.rstudio.com/" target="_blank">R</a> and <a href = "http://www.rstudio.com/" target="_blank">Rstudio</a> to create reproducible analyses, figures, and reports in hopes to increase transparency and enhance collaboration. I am particularly interested in developing workflows that make every step of the research 100% reproducible, from data collection to publication. This involves using open source software for data collection, such as <a href = "http://www.jspsych.org/" target="_blank">jsPsych</a>, and leveraging <a href="https://cran.rstudio.com/" target="_blank">R</a> and <a href="http://rmarkdown.rstudio.com/" target="_blank">R markdown</a> to clean, analyze, and report on results. On this site, I share some of my techniques and insights from my own experience developing such workflows.
 
